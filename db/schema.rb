@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118222404) do
+ActiveRecord::Schema.define(version: 20151118224945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,10 @@ ActiveRecord::Schema.define(version: 20151118222404) do
     t.boolean  "tag_sports"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "location_id"
   end
+
+  add_index "events", ["location_id"], name: "index_events_on_location_id", using: :btree
 
   create_table "locations", force: :cascade do |t|
     t.decimal  "lat"
@@ -66,6 +69,7 @@ ActiveRecord::Schema.define(version: 20151118222404) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "events", "locations"
   add_foreign_key "user_events", "events"
   add_foreign_key "user_events", "users"
 end
