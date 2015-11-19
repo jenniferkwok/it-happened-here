@@ -18,5 +18,6 @@ end
 
 post '/locations', to: 'locations#create'
 get '/locations', to: "locations#show"
+get '/locations/:id', to: "locations#showOne"
 
 end
