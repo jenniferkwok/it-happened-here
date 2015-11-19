@@ -9,7 +9,13 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+<<<<<<< HEAD:app/assets/stylesheets/application.scss
 
+=======
+ *
+ *= require_tree .
+ *= require bootstrap
+>>>>>>> 4b04ad3230b75f1437e5cd37011d223a4a3701d4:app/assets/stylesheets/application.css
  *= require_self
  *= 
  *= require_tree .

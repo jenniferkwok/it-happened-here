@@ -35,6 +35,9 @@ gem 'bootstrap-sass', '~>3.3.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use Geocoder to convert addresses to lat and lng
+gem 'geocoder'
+
 # Use Devise for Authentication 
 gem 'devise'
 
