@@ -210,63 +210,63 @@ Location.create(
 		username: "InspectorSteve"
 		email: "skeller@sfpd.gov"
 		password_digest: "michael"
-		image: " "
+		image: "michaeldouglas.jpg"
 		about: "The streets of San Francisco have always been paved with gold, or as we say, the hearts of its people."
 		)
 	Users.create(
 		username: "Reggie48"
 		email: "rhammond@penalsystem.org"
 		password_digest: "eddie"
-		image: " "
+		image: "eddiemurphy.jpg"
 		about: "If you have two days to spend in San Francisco, stay up for the nightlife."
 		)
 	Users.create(
 		username: "cadillac76"
 		email: "jcates@sfpd.gov"
 		password_digest: "nick"
-		image: " "
+		image: "nicknolte.jpg"
 		about: "Cable cars are a must.  So is a gas guzzling convertible with rust all over."
 		)
 	Users.create(
 		username: "antman2"
 		email: "slang@notacriminal.com"
 		password_digest: "paul"
-		image: " "
+		image: "paulrudd.jpg"
 		about: "To truly enjoy San Francisco, you have to take time to admire all the small things."
 		)
 	Users.create(
 		username: "untidyharry"
 		email: "dirtyboy@sfpd.gov"
 		password_digest: "clint"
-		image: " "
+		image: "clinteastwood.jpg"
 		about: "Plan to enjoy everything, but don't overplan.  Really look at your plan and ask yourself if you feel lucky."
 		)
 	Users.create(
 		username: "amytan"
 		email: "ihatemymother@gmail.com"
 		password_digest: "amy"
-		image: " "
+		image: "amytan.jpg"
 		about: "A true shopping adventure cannot happen without visiting Chinatown."
 		)
 	Users.create(
 		username: "englishnanny1"
 		email: "doubtfire@williams.com"
 		password_digest: "robin"
-		image: " "
+		image: "robinwilliams.jpg"
 		about: "Watch out for the run by fruities."
 		)
 	Users.create(
 		username: "hateheights"
 		email: "sferguson@sfpd.com"
 		password_digest: "james"
-		image: " "
+		image: "jamesstewart.jpg"
 		about: "Love the streets, the metro, the piers.  Not so much the rooftop views."
 		)
 	Users.create(
 		username: "zodiac22"
 		email: "incognito@sfchronicle.com"
 		password_digest: "jake"
-		image: " "
+		image: "jakegylenhall.jpg"
 		about: "Any walk in any park is a great time to be had.  Try it at night."
 		)
 	
