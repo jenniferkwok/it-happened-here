@@ -9,10 +9,9 @@ Title of event:
 <div>
 Year:
 <%= f.number_field :year %>
-<hr>
-<%= select_month(Time.now) %>
-<%= select_day(Time.now) %>
-....
+<!-- <%= select_month(Time.now) %> -->
+<!-- <%= select_day(Time.now) %> -->
+<br>
 Date:
 <%= f.date_field :date, placeholder: "Date", :prompt => :month %>
 </div>
@@ -25,10 +24,11 @@ Image:
 <%= f.text_field :image, placeholder: "Image URL" %>
 </div>
 <div>
-Details of the event:
+Details:<br>
 <%= f.text_area :content, placeholder: "Tell us about this event" %>
 </div>
 <div>
+Tags:<br>
 <%= f.check_box :tag_art  %> Art and Culture
 <%= f.check_box :tag_people  %> People
 <%= f.check_box :tag_science  %> Science
