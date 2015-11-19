@@ -4,6 +4,8 @@ class EventsController < ApplicationController
 
 	def index
 		@events = Event.all
+		@locations = Location.all
+		gon.locations = @locations
 	end
 
 	def new
