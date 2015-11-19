@@ -1,0 +1,36 @@
+this is for new events!
+
+<h1>Add a Historical Event</h1>
+<%= form_for @event do |f| %>
+<div>
+<%= f.text_field :title, placeholder: "Title" %>
+</div>
+<div>
+<%= f.number_field :year %>
+<hr>
+<%= select_month(Time.now) %>
+<%= select_day(Time.now) %>
+....
+<%= f.date_field :date, placeholder: "Date", :prompt => :month %>
+</div>
+<div>
+<%= f.text_field :link, placeholder: "Link" %>
+</div>
+<div>
+<%= f.text_field :image, placeholder: "Image URL" %>
+</div>
+<div>
+<%= f.text_area :content, placeholder: "Tell us about this event" %>
+</div>
+<div>
+<%= f.check_box :tag_art  %> Art and Culture
+<%= f.check_box :tag_people  %> People
+<%= f.check_box :tag_science  %> Science
+<%= f.check_box :tag_politics  %> Politics
+<%= f.check_box :tag_conflict  %> Conflict
+<%= f.check_box :tag_nature  %> Nature
+<%= f.check_box :tag_sports  %> Sports
+</div>
+
+<%= f.submit "Submit" %>
+<% end %>
