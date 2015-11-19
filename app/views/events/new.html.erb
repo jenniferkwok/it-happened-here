@@ -3,23 +3,29 @@ this is for new events!
 <h1>Add a Historical Event</h1>
 <%= form_for @event do |f| %>
 <div>
+Title of event:
 <%= f.text_field :title, placeholder: "Title" %>
 </div>
 <div>
+Year:
 <%= f.number_field :year %>
 <hr>
 <%= select_month(Time.now) %>
 <%= select_day(Time.now) %>
 ....
+Date:
 <%= f.date_field :date, placeholder: "Date", :prompt => :month %>
 </div>
 <div>
+Link:
 <%= f.text_field :link, placeholder: "Link" %>
 </div>
 <div>
+Image:
 <%= f.text_field :image, placeholder: "Image URL" %>
 </div>
 <div>
+Details of the event:
 <%= f.text_area :content, placeholder: "Tell us about this event" %>
 </div>
 <div>
