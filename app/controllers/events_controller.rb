@@ -1,9 +1,11 @@
 class EventsController < ApplicationController
 
-	# attr_accessor :geocoded_by
+	before_filter :authenticate_user!, :except => [:index]
 
 	def index
 		@events = Event.all
+		@locations = Location.all
+		gon.locations = @locations
 	end
 
 	def new
