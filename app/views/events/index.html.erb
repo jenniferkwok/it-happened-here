@@ -3,7 +3,20 @@
 <div>
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
+
 <a href="/events/new">Add a Historical Event</a>
+
+<p>
+	<% @events.each do |e| %>
+
+	<div>
+	<%= e.title %>
+	<img src="<%= e.image %>" class = "event-image" /img>
+	<%= e.content %>
+	</div>
+	
+	<% end %>
+</p>
 
 <script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false&amp;libraries=places"></script>
 <script type="text/javascript">
@@ -19,6 +32,12 @@ function initialize() {
     var london = new google.maps.LatLng(51.51, -0.127);
     var londonmarker = new google.maps.Marker({
         position: london,
+        map: map
+    });
+
+    var locationLatLong = new google.maps.LatLng(location.lat, location.lng);
+    var marker = new google.maps.Marker({
+        position: locationLatLong,
         map: map
     });
 

@@ -36,6 +36,9 @@ gem 'geocoder'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use Geocoder to convert addresses to lat and lng
+gem 'geocoder'
+
 # Use Devise for Authentication 
 gem 'devise'
 

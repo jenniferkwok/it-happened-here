@@ -9,11 +9,16 @@ Title of event:
 <div>
 Year:
 <%= f.number_field :year %>
-<!-- <%= select_month(Time.now) %> -->
-<!-- <%= select_day(Time.now) %> -->
 <br>
 Date:
 <%= f.date_field :date, placeholder: "Date", :prompt => :month %>
+</div>
+<div>
+	<%= f.collection_select(:location_id, Location.all, :id, :name) %> 
+	<!-- Button trigger modal to add location-->
+	<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+  		Add Location
+	</button>
 </div>
 <div>
 Link:
@@ -40,3 +45,39 @@ Tags:<br>
 
 <%= f.submit "Submit" %>
 <% end %>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add a Location</h4>
+      </div>
+      <div class="modal-body">
+
+      	<%= form_for @location, url: locations_path do |f| %>
+      	<div>
+		Title of location:
+		<%= f.text_field :name, placeholder: "Name" %>
+		</div>
+		<div>
+		Address of location:
+		<%= f.text_field :address, placeholder: "Address" %>
+		</div>
+		<div>
+		Link to image:
+		<%= f.text_field :image, placeholder: "Image" %>
+		</div>
+		<%= f.submit "Submit" %>
+		<% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
