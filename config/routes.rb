@@ -11,4 +11,6 @@ resources :users do
   end
 end
 
+# get "/events/new", to: "events#new"
+
 end
