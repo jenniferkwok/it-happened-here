@@ -191,6 +191,86 @@ Location.create(
 	image: 'alamosquare.jpg',
 	place_id: 'ChIJudgZRaWAhYARSP5xZKXpvV8',
 	)
+
+	Users.create(
+		username: "JohnMason"
+		email: "jpmason@therock.com "
+		password_digest: "sean"
+		image: "seanconnery.jpg"
+		about: "Spent a lot of time looking at San Francisco from the best little window ever."
+		)
+	Users.create(
+		username: "Goodspeed1"
+		email: "stanley@fbi.gov"
+		password_digest: "nicolas"
+		image: "niccage.jpg"
+		about: "First visit and it was a gas.  Saw everything in a single drive."
+		)
+	Users.create(
+		username: "InspectorSteve"
+		email: "skeller@sfpd.gov"
+		password_digest: "michael"
+		image: " "
+		about: "The streets of San Francisco have always been paved with gold, or as we say, the hearts of its people."
+		)
+	Users.create(
+		username: "Reggie48"
+		email: "rhammond@penalsystem.org"
+		password_digest: "eddie"
+		image: " "
+		about: "If you have two days to spend in San Francisco, stay up for the nightlife."
+		)
+	Users.create(
+		username: "cadillac76"
+		email: "jcates@sfpd.gov"
+		password_digest: "nick"
+		image: " "
+		about: "Cable cars are a must.  So is a gas guzzling convertible with rust all over."
+		)
+	Users.create(
+		username: "antman2"
+		email: "slang@notacriminal.com"
+		password_digest: "paul"
+		image: " "
+		about: "To truly enjoy San Francisco, you have to take time to admire all the small things."
+		)
+	Users.create(
+		username: "untidyharry"
+		email: "dirtyboy@sfpd.gov"
+		password_digest: "clint"
+		image: " "
+		about: "Plan to enjoy everything, but don't overplan.  Really look at your plan and ask yourself if you feel lucky."
+		)
+	Users.create(
+		username: "amytan"
+		email: "ihatemymother@gmail.com"
+		password_digest: "amy"
+		image: " "
+		about: "A true shopping adventure cannot happen without visiting Chinatown."
+		)
+	Users.create(
+		username: "englishnanny1"
+		email: "doubtfire@williams.com"
+		password_digest: "robin"
+		image: " "
+		about: "Watch out for the run by fruities."
+		)
+	Users.create(
+		username: "hateheights"
+		email: "sferguson@sfpd.com"
+		password_digest: "james"
+		image: " "
+		about: "Love the streets, the metro, the piers.  Not so much the rooftop views."
+		)
+	Users.create(
+		username: "zodiac22"
+		email: "incognito@sfchronicle.com"
+		password_digest: "jake"
+		image: " "
+		about: "Any walk in any park is a great time to be had.  Try it at night."
+		)
+	
+
 #============add users seed data here=========
 #   create_table "users", force: :cascade do |t|
 #     t.string   "username"
