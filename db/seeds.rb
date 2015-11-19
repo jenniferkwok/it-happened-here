@@ -214,102 +214,102 @@ Event.create(
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
-	tag_ : true
-	location_id:
+	title: "50 Shades of Armory?"
+	year: "1912"
+	date: 
+	address: "1800 Mission St, San Francisco, CA 94103"
+	link: "https://en.wikipedia.org/wiki/San_Francisco_Armory"
+	content: "Originally built as an armory and arsenal for the US National Guard, it was purchased by Kink.com, which specialize in BDSM content."
+	tag_politics: true
+	location_id: 17
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
-	tag_ : true
-	location_id:
+	title: "Graced with historical people"
+	year: "1849"
+	date: 
+	address: "1051 Taylor St, San Francisco, CA 94108"
+	link: "https://en.wikipedia.org/wiki/Grace_Cathedral,_San_Francisco"
+	content: "Among the many historically significant people to be associated with Grace Cathedral, Dr. Martin Luther King gave the largest sermon at Grace Cathedral until the September 11, 2001 memorial sermon took place."
+	tag_art: true
+	location_id: 18
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
-	tag_ : true
-	location_id:
+	title: "City food"
+	year: "1925"
+	date: 
+	address: "100 Great Highway, San Francisco, CA 94121"
+	link: "https://en.wikipedia.org/wiki/Golden_Gate_Park#Beach_Chalet"
+	content: "Originally opened as a city-run restaurant and included changing rooms for beach visitors."
+	tag_politics: true
+	location_id:19
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
-	tag_ : true
-	location_id:
+	title: "Where the heart is."
+	year: "1907"
+	date: 
+	address: "950 Mason St, San Francisco, CA 94108"
+	link: "https://en.wikipedia.org/wiki/Fairmont_San_Francisco"
+	content: "In December of 1961, Tony Bennett first sang 'I Left My Heart in San Francisco' in the Venetian Room at the Fairmont Hotel."
+	tag_art: true
+	location_id: 20
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
-	tag_ : true
-	location_id:
+	title: "Sweet enough as is."
+	year: "1912"
+	date: 
+	address: "2080 Washington St, San Francisco, CA 94109"
+	link: "http://sf.curbed.com/archives/2014/11/25/behind_the_hedges_and_inside_the_history_of_danielle_steels_spreckels_mansion.php"
+	content: "Claus Spreckels originally opened a brewery in San Francisco before turning to sugar production and importinga and built the mansion for his wife and family.  Many years later, Danielle Steel is listed as its current owner and occupant."
+	tag_people: true
+	location_id: 21
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
+	title: "History not forgotten."
+	year: "1928"
+	date: 
+	address: "2353 Mission St, San Francisco, CA 94110"
+	link: "http://noehill.com/sf/landmarks/sf214.asp"
+	content: "It was once the second largest theater in San Francisco seating 3000.  The presence of Grandeur is still in the air, despite everything else pointing to the opposite."
 	tag_ : true
-	location_id:
+	location_id: 22
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
-	tag_ : true
-	location_id:
+	title: "Just not high enough."
+	year: "1937"
+	date: "05/27/37"
+	address: "Golden Gate Bridge, San Francisco CA 94129"
+	link: "https://en.wikipedia.org/wiki/Golden_Gate_Bridge"
+	content: "The Golden Gate Bridge is the second most used suicide bridge in the world, second to the Nanjing Yangtze River Bridge.  After a fall of four seconds, jumpers hit the water at around 75 mph or about 120 km/h. Most of the jumpers die from impact trauma. About 5% of the jumpers survive the initial impact but generally drown or die of hypothermia in the cold water."
+	tag_art: true
+	location_id: 23
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
-	tag_ : true
-	location_id:
+	title: "Backing 1/3 of the nation's currency"
+	year: "1874"
+	date: 
+	address: "155 Hermann St, San Francisco, CA 94103"
+	link: "https://en.wikipedia.org/wiki/San_Francisco_Mint"
+	content: "At its peak, it once housed 1/3 of the United States' gold reserves."
+	tag_politics: true
+	location_id: 24
 	)
 
 Event.create(
-	title: ""
-	year: ""
-	date: ""
-	address: ""
-	link: ""
-	content: ""
-	tag_ : true
-	location_id:
+	title: "Postcard Row"
+	year: 
+	date: 
+	address: "Alamo Square, San Francisco, CA 94117"
+	link: "https://en.wikipedia.org/wiki/Alamo_Square,_San_Francisco"
+	content: "The Alamo Square area contains the second largest concentration of homes over 10,000 square feet (930 m2) in San Francisco, after the Pacific Heights neighborhood.  Although pictured in the series Full House, no other filming for the show was done in the area."
+	tag_art: true
+	location_id: 25
 	)
 
 
@@ -431,13 +431,13 @@ Location.create(
 	)
 	Location.create( 
 	name: 'Grace Cathedral',
-	address: '1051 Taylor St, San Francisco, CA ',
+	address: '1051 Taylor St, San Francisco, CA 94108',
 	image: 'gracecathedral.jpg',
 	place_id: 'ChIJY0dQvZKAhYARcB4643GOKCE'
 	)
 	Location.create( 
 	name: 'Beach Chalet',
-	address: '100 Great Highway, San Francisco, CA ',
+	address: '100 Great Highway, San Francisco, CA 94121',
 	image: 'beachchalet.jpg',
 	place_id: 'ChIJ1ShzE7mHhYARnIi1rffKeVc'
 	)
