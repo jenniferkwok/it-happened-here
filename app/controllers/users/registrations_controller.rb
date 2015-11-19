@@ -1,6 +1,8 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 before_filter :configure_sign_up_params, only: [:create]
 before_filter :configure_account_update_params, only: [:update]
+# has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+# validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   # GET /resource/sign_up
   def new
@@ -9,6 +11,7 @@ before_filter :configure_account_update_params, only: [:update]
 
   # POST /resource
   def create
+    @user = User.create( user_params )
     super
   end
 
@@ -40,12 +43,14 @@ before_filter :configure_account_update_params, only: [:update]
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.for(:sign_up) << :attribute
+    devise_parameter_sanitizer.for(:sign_up) << :attribute 
+    #params.require(:user).permit(:username, :email, :avatar, :about)
   end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
-    devise_parameter_sanitizer.for(:account_update) << :attribute
+      devise_parameter_sanitizer.for(:account_update) << :attribute
+      #params.require(:user).permit(:username, :email, :avatar, :about)
   end
 
   # The path used after sign up.
@@ -58,3 +63,5 @@ before_filter :configure_account_update_params, only: [:update]
     super(resource)
   end
 end
+
+

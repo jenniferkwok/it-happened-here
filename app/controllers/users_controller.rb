@@ -1,12 +1,26 @@
 class UsersController < ApplicationController
-
 	# before_action :authenticate_user!
-
 	# user_signed_in?
 	# current_user
 	# user_session
+  
 
-  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
+end
+
+def create
+  #@user = User.create( user_params )
+end
+
+private
+
+# Use strong_parameters for attribute whitelisting
+# Be sure to update your create() and update() controller methods.
+
+def user_params
+  #params.permit(:user, :avatar, :about)
+end
+def show
+	# p user_params
+	# @user = current_user
 end
