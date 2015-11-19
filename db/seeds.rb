@@ -163,7 +163,7 @@ Event.create(
 	year: "1932",
 	
 	address: "301 Wan Ness Ave, San Francisco, CA 94109",
-	link: "https://en.wikipedia.org/wiki/San_Francisco_War_Memorial_and_Performing_Arts_Center"
+	link: "https://en.wikipedia.org/wiki/San_Francisco_War_Memorial_and_Performing_Arts_Center",
 	content: "Originally named to commemorate all the people who served in the first World War, it was fitting that the Treaty of San Francisco in 1951 formally ended World War II hostilities with Japan.",
 	tag_art: true,
 	location_id: 12
@@ -275,7 +275,7 @@ Event.create(
 	address: "2353 Mission St, San Francisco, CA 94110",
 	link: "http://noehill.com/sf/landmarks/sf214.asp",
 	content: "It was once the second largest theater in San Francisco seating 3000.  The presence of Grandeur is still in the air, despite everything else pointing to the opposite.",
-	tag_ : true,
+	tag_art: true,
 	location_id: 22
 	)
 
@@ -385,7 +385,7 @@ Location.create(
 	name: 'Conservatory of Flowers',
 	address: '100 John F Kennedy Dr, San Francisco, CA 94118',
 	image: 'conservatoryofflowers.jpg',
-	place_id: 'ChIJ5abCmkWHhYARH3zgiLVc_Ew'
+	place_id: 'ChIJ5abCmkWHhYARH3zgiLVc_Ew',
 	lat: 37.7726,
 	lng: -122.4602
 	)
@@ -393,15 +393,15 @@ Location.create(
 	name: 'Flood Mansion',
 	address: '1000 California St, San Francisco, CA 94115',
 	image: 'floodmansion.jpg',
-	place_id: 'ChIJjaNJDsWAhYARpTzMWrvuiEI'
-	lat: 37.792
+	place_id: 'ChIJjaNJDsWAhYARpTzMWrvuiEI',
+	lat: 37.792,
 	lng: -122.4114
 	)
 	Location.create( 
 	name: "Lotta's Fountain",
 	address: 'Kearny St, San Francisco CA 94105',
 	image: 'lottafountain.jpg',
-	place_id: 'ChIJ-zVUQoiAhYAREEBQ1oqGsiE'
+	place_id: 'ChIJ-zVUQoiAhYAREEBQ1oqGsiE',
 	lat: 37.7879,
 	lng: -122.4033
 	)
@@ -409,7 +409,7 @@ Location.create(
 	name: 'California Historical Society',
 	address: '2090 Jackson St, San Francisco, CA 94105',
 	image: 'whittiermansion.jpg',
-	place_id: 'ChIJx2NZ-IeAhYARwOHJPBZJJBA'
+	place_id: 'ChIJx2NZ-IeAhYARwOHJPBZJJBA',
 	lat: 37.7933,
 	lng: -122.4295
 	)
@@ -417,7 +417,7 @@ Location.create(
 	name: 'War Memorial Opera House',
 	address: '301 Wan Ness Ave, San Francisco, CA 94109',
 	image: 'warmemorial.jpg',
-	place_id: 'ChIJ7UVGDpmAhYARBt5goMZ-AO0'
+	place_id: 'ChIJ7UVGDpmAhYARBt5goMZ-AO0',
 	lat: 37.464483,
 	lng: -122.251364
 	)
@@ -425,7 +425,7 @@ Location.create(
 	name: 'Palace of Fine Arts',
 	address: '3701 Lyon St, San Francisco, CA 94123',
 	image: 'palaceoffinearts.jpg',
-	place_id: 'ChIJRb6WFtWGhYARLN9EOlXR2JI'
+	place_id: 'ChIJRb6WFtWGhYARLN9EOlXR2JI',
 	lat: 37.8029,
 	lng: -122.4484
 	)
@@ -433,7 +433,7 @@ Location.create(
 	name: 'Orpheum Theatre',
 	address: '1192 Market St, San Francisco, CA 94102',
 	image: 'orpheumtheater.jpg',
-	place_id: 'ChIJ76ERUo6AhYARr8LiSU5hciU'
+	place_id: 'ChIJ76ERUo6AhYARr8LiSU5hciU',
 	lat:  37.779081,
 	lng: -122.414708
 	)
@@ -442,7 +442,7 @@ Location.create(
 	name: 'Golden Gate Park',
 	address: '1232 John F Kennedy Dr, San Francisco, CA 94121',
 	image: 'goldengatepark.jpg',
-	place_id: 'ChIJY_dFYHKHhYARMKc772iLvnE'
+	place_id: 'ChIJY_dFYHKHhYARMKc772iLvnE',
 	lat: 37.77064,
 	lng: -122.46749
 	)
@@ -450,15 +450,15 @@ Location.create(
 	name: 'The Castro Theatre',
 	address: '429 Castro St, San Francisco, CA 94114',
 	image: 'castrotheater.jpg',
-	place_id: 'ChIJeWH4Txt-j4ARJZQ5pivU-hQ'
-	lat: 37.7620 ,
+	place_id: 'ChIJeWH4Txt-j4ARJZQ5pivU-hQ',
+	lat: 37.7620,
 	lng: -122.435
 	)
 	Location.create( 
 	name: 'San Francisco Armory',
 	address: '1800 Mission St, San Francisco, CA 94103',
 	image: 'armoryandarsenal.jpg',
-	place_id: 'ChIJOQnmcSF-j4ARqbgcqD6DI_k'
+	place_id: 'ChIJOQnmcSF-j4ARqbgcqD6DI_k',
 	lat: 37.767778,
 	lng: -122.420556
 	)
@@ -466,7 +466,7 @@ Location.create(
 	name: 'Grace Cathedral',
 	address: '1051 Taylor St, San Francisco, CA 94108',
 	image: 'gracecathedral.jpg',
-	place_id: 'ChIJY0dQvZKAhYARcB4643GOKCE'
+	place_id: 'ChIJY0dQvZKAhYARcB4643GOKCE',
 	lat: 37.4730,
 	lng: -122.2447
 	)
@@ -474,7 +474,7 @@ Location.create(
 	name: 'Beach Chalet',
 	address: '100 Great Highway, San Francisco, CA 94121',
 	image: 'beachchalet.jpg',
-	place_id: 'ChIJ1ShzE7mHhYARnIi1rffKeVc'
+	place_id: 'ChIJ1ShzE7mHhYARnIi1rffKeVc',
 	lat: 37.7695189,
 	lng: -122.5124006
 	)
@@ -482,7 +482,7 @@ Location.create(
 	name: 'Fairmont Hotel',
 	address: '950 Mason St, San Francisco, CA 94108',
 	image: 'fairmont.jpg',
-	place_id: 'ChIJN2S4EI2AhYAR9J4Qeh1U8Aw'
+	place_id: 'ChIJN2S4EI2AhYAR9J4Qeh1U8Aw',
 	lat: 37.7924,
 	lng: -122.4106
 	)
@@ -490,7 +490,7 @@ Location.create(
 	name: 'Spreckles Mansion',
 	address: '2080 Washington St, San Francisco, CA 94109',
 	image: 'sprecklesmansion.jpg',
-	place_id: 'ChIJTzY5cMGAhYARrhOKjfwFtp0'
+	place_id: 'ChIJTzY5cMGAhYARrhOKjfwFtp0',
 	lat: 37.7927372,
 	lng: -122.4297243
 	)
@@ -498,7 +498,7 @@ Location.create(
 	name: 'El Capitan Theater and Hotel',
 	address: '2353 Mission St, San Francisco, CA 94110',
 	image: 'elcapitantheater.jpg',
-	place_id: 'ChIJByNqcjx-j4ARADcHb-u2dX0'
+	place_id: 'ChIJByNqcjx-j4ARADcHb-u2dX0',
 	lat: 37.7592471,
 	lng: -122.4211824
 	)
@@ -506,7 +506,7 @@ Location.create(
 	name: 'Golden Gate Bridge',
 	address: 'Golden Gate Bridge, San Francisco CA 94129',
 	image: 'goldengate.jpg',
-	place_id: ' ChIJw____96GhYARCVVwg5cT7c0'
+	place_id: ' ChIJw____96GhYARCVVwg5cT7c0',
 	lat: 37.7986,
 	lng: -122.417
 	)
@@ -514,7 +514,7 @@ Location.create(
 	name: 'Old US Mint',
 	address: '155 Hermann St, San Francisco, CA 94103',
 	image: 'oldusmint.jpg',
-	place_id: 'ChIJfw7KU6KAhYARb4UBE7BbCyc'
+	place_id: 'ChIJfw7KU6KAhYARb4UBE7BbCyc',
 	lat: 37.7829,
 	lng: -122.4071
 	)
@@ -522,15 +522,15 @@ Location.create(
 	name: 'The House from Full House',
 	address: 'Alamo Square, San Francisco, CA 94117',
 	image: 'alamosquare.jpg',
-	place_id: 'ChIJudgZRaWAhYARSP5xZKXpvV8'
+	place_id: 'ChIJudgZRaWAhYARSP5xZKXpvV8',
 	lat: 37.776384,
 	lng: -122.434709
 	)
 	Location.create(
-	name: "San Francisco Giants"
-	address: "24 Willie Mays Plaza, San Francisco, CA 94107"
-	image: "at&tpark.jpg"
-	place_id: "ChIJ_T25cNd_j4ARehGmHe0pT84"
+	name: "San Francisco Giants",
+	address: "24 Willie Mays Plaza, San Francisco, CA 94107",
+	image: "at&tpark.jpg",
+	place_id: "ChIJ_T25cNd_j4ARehGmHe0pT84",
 	lat: 37.4643,
 	lng: -122.2321
 	)
