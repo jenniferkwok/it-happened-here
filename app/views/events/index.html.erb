@@ -15,7 +15,7 @@
 
 function initialize() {
      var map = new google.maps.Map(document.getElementById('map'), {
-     zoom: 16,
+     zoom: 14,
       center: new google.maps.LatLng(37.790841, -122.42),
     });
 
@@ -23,6 +23,14 @@ function initialize() {
          navigator.geolocation.getCurrentPosition(function (position) {
              initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
              map.setCenter(initialLocation);
+             map.setZoom(16);
+
+    var marker = new google.maps.Marker({
+    	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFBB00',
+        position: initialLocation,
+        map: map
+    });     
+
 //api location name
 	getLocationName();
 function getLocationName(){
@@ -48,9 +56,11 @@ function loadData (){
  gon.locations.forEach(function(location){
     var locationLatLong = new google.maps.LatLng(location.lat, location.lng);
     var marker = new google.maps.Marker({
+    	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569',
         position: locationLatLong,
         map: map
     });
+
     google.maps.event.addListener(marker, 'click', function() {
       $('#showEvents').empty();
       
@@ -59,7 +69,7 @@ function loadData (){
           $('#showEvents').slideDown( "slow", function() {
           // Animation complete.
 
-          $('#showEvents').append('<p>' + e.content + '</p>');
+          $('#showEvents').append('<h4>' + e.year + '</h4>' + '<p>' + e.content + '</p>');
         });
           
         } 
