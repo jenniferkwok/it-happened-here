@@ -1,12 +1,9 @@
 <h1>What happened in ... <%= @location.name %>?</h1>
 <p>
-	<% @events.each do |le| %>
-
+	<% @events.each do |event| %>
 	<div>
-	<%= le.title %>
-	<img src="<%= e.image %>" class = "event-image" /img>
-	<%= le.content %>
+	<h5><%= event.year %> - <%= event.title %></h5>
 	</div>
-	
+
 	<% end %>
 </p>
