@@ -17,6 +17,7 @@ function initialize() {
      var map = new google.maps.Map(document.getElementById('map'), {
      zoom: 14,
       center: new google.maps.LatLng(37.790841, -122.42),
+      styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#f7ded9"},{"visibility":"on"}]}]
     });
 
      if (navigator.geolocation) {
@@ -26,10 +27,18 @@ function initialize() {
              map.setZoom(16);
 
     var marker = new google.maps.Marker({
-    	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFBB00',
+    	icon: {url :'/assets/youarehere150.png',
+    	height:10},
+    	// icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFBB00',
         position: initialLocation,
         map: map
-    });     
+    });
+      var infowindow = new google.maps.InfoWindow({
+    content: "You are here"
+  });
+      marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });     
 
 //api location name
 	getLocationName();
@@ -56,9 +65,12 @@ function loadData (){
  gon.locations.forEach(function(location){
     var locationLatLong = new google.maps.LatLng(location.lat, location.lng);
     var marker = new google.maps.Marker({
-    	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569',
+    	icon: {
+    		url: '/assets/point60.png'
+    	},
         position: locationLatLong,
         map: map
+
     });
 
     google.maps.event.addListener(marker, 'click', function() {
