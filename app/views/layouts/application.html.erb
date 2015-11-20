@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html>
+
+<html lang="en-us">
 <head>
-  <title>ItHappenedHere</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>It Happened Here</title>
+
+  <!-- Load fonts -->
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= Gon::Base.render_data %>
 </head>
 <body>
-	<p class="navbar-text pull-right">
-	<% if user_signed_in? %>
-  	Logged in as <strong><%= current_user.email %></strong>.
-  	<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-	<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-	<% else %>
-  	<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
- 	<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-	<% end %>
+	<div class="jumbotron home home-fullscreen" id="home">
+		<div class="mask"></div>
+		<a href="#" class="logo">
+		</a>
+		<a href="" class="menu-toggle" id="nav-expander"><i class="fa fa-bars"></i></a>
+		<!-- Offsite navigation -->
+		<nav class="menu">
+			<a href="#" class="close"><i class="fa fa-close"></i></a>
+			<h3>Menu</h3>
+			<ul class="nav">
+				<li><a data-scroll href="#home">HOME</a></li>
+				<li><a data-scroll href="#map">MAP</a></li>
+				<li><a data-scroll href="#locations">LOCATIONS</a></li>
+				<li><a data-scroll href="#about">ABOUT</a></li>
+			</ul>
+			</nav>
 
-	<% if notice %>
-	  <p class="alert alert-success"><%= notice %></p>
-	<% end %>
-	<% if alert %>
-	  <p class="alert alert-danger"><%= alert %></p>
-	<% end %>
+<div class="container">
+			<div class="header-info">
+				<h1>It Happened Here</h1>
+				<p>Locating historical events within your city.
+				</p>
+				<a href="#" class="btn btn-primary">SIGN UP</a>
+				<a href="#" class="btn btn-primary">LOG IN</a>
+			</div>
+		</div>
+	</div>
+
 
 <%= yield %>
 
