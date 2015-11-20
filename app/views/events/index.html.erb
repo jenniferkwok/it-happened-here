@@ -1,4 +1,75 @@
-<h1>this is events#index!</h1>
-<h3>Welcome, user!!!! </h3>
 <h1>Hello world!</h1>
+<h3>Welcome, user!!!! </h3>
+<div>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
 <a href="/events/new">Add a Historical Event</a>
+
+<p>
+	<% @events.each do |e| %>
+
+	<div>
+	<%= e.title %>
+	<img src="<%= e.image %>" class = "event-image" /img>
+	<%= e.content %>
+	</div>
+	
+	<% end %>
+</p>
+
+<script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false&amp;libraries=places"></script>
+<script type="text/javascript">
+
+function initialize() {
+     var map = new google.maps.Map(document.getElementById('map'), {
+     zoom: 13,
+      center: new google.maps.LatLng(37.77, -122.42),
+    });
+
+        loadData();
+        //gon.watch renews data in gon variables!
+        gon.watch;
+
+function loadData (){
+ gon.locations.forEach(function(location){
+    var locationLatLong = new google.maps.LatLng(location.lat, location.lng);
+    var marker = new google.maps.Marker({
+        position: locationLatLong,
+        map: map
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      window.location.href = '/locations/' + location.id;
+    });
+
+    });
+}
+
+//     var request = {
+//     	placeId: location.place_Id
+//         // placeId: 'ChIJu1XQjGaAhYAR966C7JnAu5w'
+//     };
+
+//     var infowindow = new google.maps.InfoWindow();
+//     var service = new google.maps.places.PlacesService(map);
+
+//     service.getDetails(request, function (place, status) {
+
+//         if (status == google.maps.places.PlacesServiceStatus.OK) {
+
+//             var marker = new google.maps.Marker({
+//                 map: map,
+//                 position: place.geometry.location
+//             });
+
+//             google.maps.event.addListener(marker, 'click', function () {
+//                 infowindow.setContent(place.name);
+//                 infowindow.open(map, this);
+//             });
+//         }
+//     });
+ }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>

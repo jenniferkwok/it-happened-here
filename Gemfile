@@ -24,6 +24,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # paperclip for image processing
 gem 'paperclip', "~> 4.3"
 
+gem 'gon'
+
+gem 'geocoder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -32,6 +35,9 @@ gem 'paperclip', "~> 4.3"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Use Geocoder to convert addresses to lat and lng
+gem 'geocoder'
 
 # Use Devise for Authentication 
 gem 'devise'
