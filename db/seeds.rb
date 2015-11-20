@@ -134,8 +134,8 @@ Location.create(
 	address: '301 Wan Ness Ave, San Francisco, CA 94109',
 	image: 'warmemorial.jpg',
 	place_id: 'ChIJ7UVGDpmAhYARBt5goMZ-AO0',
-	lat: 37.464483,
-	lng: -122.251364
+	lat: 37.7785872,
+	lng: -122.4230661
 	)
 	Location.create( 
 	name: 'Palace of Fine Arts',
@@ -183,8 +183,8 @@ Location.create(
 	address: '1051 Taylor St, San Francisco, CA 94108',
 	image: 'gracecathedral.jpg',
 	place_id: 'ChIJY0dQvZKAhYARcB4643GOKCE',
-	lat: 37.4730,
-	lng: -122.2447
+	lat: 37.7918387,
+	lng: -122.4155322
 	)
 	Location.create( 
 	name: 'Beach Chalet',
