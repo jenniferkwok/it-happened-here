@@ -203,9 +203,9 @@ Location.create(
 	lng: -122.4106
 	)
 	Location.create( 
-	name: 'Spreckles Mansion',
+	name: 'Spreckels Mansion',
 	address: '2080 Washington St, San Francisco, CA 94109',
-	image: 'sprecklesmansion.jpg',
+	image: 'spreckelsmansion.jpg',
 	place_id: 'ChIJTzY5cMGAhYARrhOKjfwFtp0',
 	lat: 37.7927372,
 	lng: -122.4297243
