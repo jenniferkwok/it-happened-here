@@ -60,7 +60,7 @@ function loadData (){
           // Animation complete.
 
           // When marker clicked, append event content to bottom of page and add class to div for location id
-          $('#showEvents').append('<p>' + e.content + '</p>').addClass('' + e.location_id + '');
+          $('#showEvents').append('<p>' + gon.locations[e.location_id].name + '</p>' + '<p>' + e.content + '</p>').addClass('' + e.location_id + '');
         });
           
         } 
