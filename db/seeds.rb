@@ -131,7 +131,7 @@ Location.create(
 	)
 	Location.create( 
 	name: 'War Memorial Opera House',
-	address: '301 Wan Ness Ave, San Francisco, CA 94109',
+	address: '301 Van Ness Ave, San Francisco, CA 94109',
 	image: 'warmemorial.jpg',
 	place_id: 'ChIJ7UVGDpmAhYARBt5goMZ-AO0',
 	lat: 37.7785872,
@@ -555,77 +555,88 @@ Event.create(
 	User.create(
 		username: "JohnMason",
 		email: "jpmason@therock.com ",
-		encrypted_password: "seanconnery",
+		password: "seanconnery",
+		password_confirmation: "seanconnery",
 		image: "seanconnery.jpg",
 		about: "Spent a lot of time looking at San Francisco from the best little window ever."
 		)
 	User.create(
 		username: "Goodspeed1",
 		email: "stanley@fbi.gov",
-		encrypted_password: "nicolascage",
+		password: "nicolascage",
+		password_confirmation: "nicolascage",
 		image: "niccage.jpg",
 		about: "First visit and it was a gas.  Saw everything in a single drive."
 		)
 	User.create(
 		username: "InspectorSteve",
 		email: "skeller@sfpd.gov",
-		encrypted_password: "michaeldouglas",
+		password: "michaeldouglas",
+		password_confirmation: "michaeldouglas",
 		image: "michaeldouglas.jpg",
 		about: "The streets of San Francisco have always been paved with gold, or as we say, the hearts of its people."
 		)
 	User.create(
 		username: "Reggie48",
 		email: "rhammond@penalsystem.org",
-		encrypted_password: "eddiemurphy",
+		password: "eddiemurphy",
+		password_confirmation: "eddiemurphy",
 		image: "eddiemurphy.jpg",
 		about: "If you have two days to spend in San Francisco, stay up for the nightlife."
 		)
 	User.create(
 		username: "cadillac76",
 		email: "jcates@sfpd.gov",
-		encrypted_password: "nickcage",
+		password: "nicknolte",
+		password_confirmation: "nicknolte",
 		image: "nicknolte.jpg",
 		about: "Cable cars are a must.  So is a gas guzzling convertible with rust all over."
 		)
 	User.create(
 		username: "antman2",
 		email: "slang@notacriminal.com",
-		encrypted_password: "paulrudd",
+		password: "paulrudd",
+		password_confirmation: "paulrudd",
 		image: "paulrudd.jpg",
 		about: "To truly enjoy San Francisco, you have to take time to admire all the small things."
 		)
 	User.create(
 		username: "untidyharry",
 		email: "dirtyboy@sfpd.gov",
-		encrypted_password: "clinteastwood",
+		password: "clinteastwood",
+		password_confirmation: "clinteastwood",
 		image: "clinteastwood.jpg",
 		about: "Plan to enjoy everything, but don't overplan.  Really look at your plan and ask yourself if you feel lucky."
 		)
 	User.create(
 		username: "amytan",
 		email: "ihatemymother@gmail.com",
-		encrypted_password: "amytantan",
+		password: "amytantan",
+		password_confirmation: "amytantan",
 		image: "amytan.jpg",
 		about: "A true shopping adventure cannot happen without visiting Chinatown."
 		)
 	User.create(
 		username: "englishnanny1",
 		email: "doubtfire@williams.com",
-		encrypted_password: "robinwilliams",
+		password: "robinwilliams",
+		password_confirmation: "robinwilliams",
 		image: "robinwilliams.jpg",
 		about: "Watch out for the run by fruities."
 		)
 	User.create(
 		username: "hateheights",
 		email: "sferguson@sfpd.com",
-		encrypted_password: "jamesstewart",
+		password: "jamesstewart",
+		password_confirmation: "jamesstewart",
 		image: "jamesstewart.jpg",
 		about: "Love the streets, the metro, the piers.  Not so much the rooftop views."
 		)
 	User.create(
 		username: "zodiac22",
 		email: "incognito@sfchronicle.com",
-		encrypted_password: "jakegylenhall",
+		password: "jakegylenhall",
+		password_confirmation: "jakegylenhall",
 		image: "jakegylenhall.jpg",
 		about: "Any walk in any park is a great time to be had.  Try it at night."
 		)
