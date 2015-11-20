@@ -12,7 +12,7 @@ class LocationsController < ApplicationController
 
 	def showOne
 		@location = Location.find(params[:id])
-		
+		@events = Event.where(:location_id => @location.id)
 	end
 
 end
