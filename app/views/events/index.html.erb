@@ -6,17 +6,7 @@
 
 <a href="/events/new">Add a Historical Event</a>
 
-<p>
-	<% @events.each do |e| %>
-
-	<div>
-	<%= e.title %>
-	<img src="<%= e.image %>" class = "event-image" /img>
-	<%= e.content %>
-	</div>
-	
-	<% end %>
-</p>
+<div id = "showEvents"></div>
 
 <script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false&amp;libraries=places"></script>
 <script type="text/javascript">
@@ -39,7 +29,21 @@ function loadData (){
         map: map
     });
     google.maps.event.addListener(marker, 'click', function() {
-      window.location.href = '/locations/' + location.id;
+      $('#showEvents').empty();
+      
+      gon.quickEvents.forEach(function(e){
+        if (e.location_id == location.id) {
+          $('#showEvents').slideDown( "slow", function() {
+          // Animation complete.
+
+          $('#showEvents').append('<p>' + e.content + '</p>');
+        });
+          
+        } 
+      });
+
+      
+      // window.location.href = '/locations/' + location.id;
     });
 
     });
