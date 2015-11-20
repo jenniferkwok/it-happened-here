@@ -321,17 +321,17 @@ PORTFOLIO
 }
 
 .btn-primary{
-	background: rgb(250, 92, 78);
+	background: #A9B262;
 	border-width: 2px;
 	color: #fff;
-	border-color: rgb(250, 92, 78);
+	border-color: #A9B262;
 }
 
 .btn-primary:hover,
 .btn-primary:focus{
 	background: #fff;
 	color: rgb(250, 92, 78);
-	border-color: rgb(250, 92, 78);
+	border-color: #A9B262;
 }
 
 
@@ -401,6 +401,9 @@ ul.social-icons > li > a{
 
 	.jumbotron h1, 
 	.jumbotron .h1 {
-		font-size: 75px;
+		font-size: 50px;
+	}
+	.logo {
+		width: 300px;
 	}
 }

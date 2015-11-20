@@ -15,6 +15,7 @@
   <%= Gon::Base.render_data %>
 </head>
 <body>
+
 	<div class="jumbotron home home-fullscreen" id="home">
 		<div class="mask"></div>
 		<a href="#" class="logo">
@@ -44,7 +45,20 @@
 	</div>
 
 
+				<% if notice %>
+				  <p class="alert alert-success"><%= notice %></p>
+				<% end %>
+				<% if alert %>
+				  <p class="alert alert-danger"><%= alert %></p>
+				<% end %>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+<div class="container text-center">
 <%= yield %>
-
+</div>
 </body>
 </html>
