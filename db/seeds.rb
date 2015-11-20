@@ -27,7 +27,231 @@
 
 #============add events seed data here=========
 
-Event.create(
+
+
+#   create_table "locations", force: :cascade do |t|
+#     t.decimal  "lat"
+#     t.decimal  "lng"
+#     t.string   "address"
+#     t.string   "name"
+#     t.string   "image"
+#     t.string   "place_id"
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+
+#============add locations seed data here=========
+Location.create( 
+	name: 'Ferry Building',
+	address: 'One Ferry Building San Francisco, California 94111',
+	image: 'ferrybuilding.png',
+	place_id: 'ChIJu1XQjGaAhYAR966C7JnAu5w',
+	lat: 37.7908,
+	lng: -122.4051
+	)
+Location.create( 
+	name: 'Coit Tower',
+	address: '1 Telegraph Hill Blvd, San Francisco, CA 94133',
+	image: 'coittower.png',
+	place_id: 'ChIJbyyyIfeAhYARmg3wBb7t4Ww',
+	lat: 37.8024,
+	lng: -122.4058
+	)
+Location.create( 
+	name: 'Transamerica Pyramid',
+	address: '600 Montgomery St, San Francisco, CA 94111',
+	image: 'transamerica.png',
+	place_id: 'ChIJu1XQjGaAhYAR966C7JnAu5w',
+	lat: 37.7952,
+	lng: -122.4028
+	)
+Location.create( 
+	name: 'Mission Dolores',
+	address: '320 Delores St, San Francisco, CA 94114',
+	image: 'missiondelores.jpg',
+	place_id: 'ChIJp3CqeRd-j4ARYI0i8e_kGKY',
+	lat: 37.7642,
+	lng: -122.4266
+	)
+
+Location.create( 
+	name: 'Ghirardelli Square',
+	address: '900 North Point St, San Francisco, CA 94109',
+	image: 'ghirardelli_square.jpg',
+	place_id: 'ChIJvXl2weCAhYARjSxnhzrBfNc',
+	lat: 37.805703,
+	lng: -122.421794
+	)
+Location.create( 
+	name: 'Columbus Tower',
+	address: '916 Kearny St, San Francisco, CA 94133',
+	image: 'columbustower.jpg',
+	place_id: 'ChIJbeBpw_SAhYARmR13AHfAV1I',
+	lat: 37.7964,
+	lng: -122.4049
+	)
+	Location.create( 
+	name: 'Cable Car Museum',
+	address: '1201 Mason St, San Francisco, CA 94108',
+	image: 'cablecarbarn.jpg',
+	place_id: 'ChIJX1oMlvKAhYARNZquwetszd8',
+	lat: 37.794675,
+	lng: -122.411396
+	)
+	Location.create( 
+	name: 'Conservatory of Flowers',
+	address: '100 John F Kennedy Dr, San Francisco, CA 94118',
+	image: 'conservatoryofflowers.jpg',
+	place_id: 'ChIJ5abCmkWHhYARH3zgiLVc_Ew',
+	lat: 37.7726,
+	lng: -122.4602
+	)
+	Location.create( 
+	name: 'Flood Mansion',
+	address: '1000 California St, San Francisco, CA 94115',
+	image: 'floodmansion.jpg',
+	place_id: 'ChIJjaNJDsWAhYARpTzMWrvuiEI',
+	lat: 37.792,
+	lng: -122.4114
+	)
+	Location.create( 
+	name: "Lotta's Fountain",
+	address: 'Kearny St, San Francisco CA 94105',
+	image: 'lottafountain.jpg',
+	place_id: 'ChIJ-zVUQoiAhYAREEBQ1oqGsiE',
+	lat: 37.7879,
+	lng: -122.4033
+	)
+	Location.create( 
+	name: 'California Historical Society',
+	address: '2090 Jackson St, San Francisco, CA 94105',
+	image: 'whittiermansion.jpg',
+	place_id: 'ChIJx2NZ-IeAhYARwOHJPBZJJBA',
+	lat: 37.7933,
+	lng: -122.4295
+	)
+	Location.create( 
+	name: 'War Memorial Opera House',
+	address: '301 Wan Ness Ave, San Francisco, CA 94109',
+	image: 'warmemorial.jpg',
+	place_id: 'ChIJ7UVGDpmAhYARBt5goMZ-AO0',
+	lat: 37.7785872,
+	lng: -122.4230661
+	)
+	Location.create( 
+	name: 'Palace of Fine Arts',
+	address: '3701 Lyon St, San Francisco, CA 94123',
+	image: 'palaceoffinearts.jpg',
+	place_id: 'ChIJRb6WFtWGhYARLN9EOlXR2JI',
+	lat: 37.8029,
+	lng: -122.4484
+	)
+	Location.create( 
+	name: 'Orpheum Theatre',
+	address: '1192 Market St, San Francisco, CA 94102',
+	image: 'orpheumtheater.jpg',
+	place_id: 'ChIJ76ERUo6AhYARr8LiSU5hciU',
+	lat:  37.779081,
+	lng: -122.414708
+	)
+	
+	Location.create( 
+	name: 'Golden Gate Park',
+	address: '1232 John F Kennedy Dr, San Francisco, CA 94121',
+	image: 'goldengatepark.jpg',
+	place_id: 'ChIJY_dFYHKHhYARMKc772iLvnE',
+	lat: 37.77064,
+	lng: -122.46749
+	)
+	Location.create( 
+	name: 'The Castro Theatre',
+	address: '429 Castro St, San Francisco, CA 94114',
+	image: 'castrotheater.jpg',
+	place_id: 'ChIJeWH4Txt-j4ARJZQ5pivU-hQ',
+	lat: 37.7620,
+	lng: -122.435
+	)
+	Location.create( 
+	name: 'San Francisco Armory',
+	address: '1800 Mission St, San Francisco, CA 94103',
+	image: 'armoryandarsenal.jpg',
+	place_id: 'ChIJOQnmcSF-j4ARqbgcqD6DI_k',
+	lat: 37.767778,
+	lng: -122.420556
+	)
+	Location.create( 
+	name: 'Grace Cathedral',
+	address: '1051 Taylor St, San Francisco, CA 94108',
+	image: 'gracecathedral.jpg',
+	place_id: 'ChIJY0dQvZKAhYARcB4643GOKCE',
+	lat: 37.7918387,
+	lng: -122.4155322
+	)
+	Location.create( 
+	name: 'Beach Chalet',
+	address: '100 Great Highway, San Francisco, CA 94121',
+	image: 'beachchalet.jpg',
+	place_id: 'ChIJ1ShzE7mHhYARnIi1rffKeVc',
+	lat: 37.7695189,
+	lng: -122.5124006
+	)
+	Location.create( 
+	name: 'Fairmont Hotel',
+	address: '950 Mason St, San Francisco, CA 94108',
+	image: 'fairmont.jpg',
+	place_id: 'ChIJN2S4EI2AhYAR9J4Qeh1U8Aw',
+	lat: 37.7924,
+	lng: -122.4106
+	)
+	Location.create( 
+	name: 'Spreckels Mansion',
+	address: '2080 Washington St, San Francisco, CA 94109',
+	image: 'spreckelsmansion.jpg',
+	place_id: 'ChIJTzY5cMGAhYARrhOKjfwFtp0',
+	lat: 37.7927372,
+	lng: -122.4297243
+	)
+	Location.create( 
+	name: 'El Capitan Theater and Hotel',
+	address: '2353 Mission St, San Francisco, CA 94110',
+	image: 'elcapitantheater.jpg',
+	place_id: 'ChIJByNqcjx-j4ARADcHb-u2dX0',
+	lat: 37.7592471,
+	lng: -122.4211824
+	)
+	Location.create( 
+	name: 'Golden Gate Bridge',
+	address: 'Golden Gate Bridge, San Francisco CA 94129',
+	image: 'goldengate.jpg',
+	place_id: ' ChIJw____96GhYARCVVwg5cT7c0',
+	lat: 37.7986,
+	lng: -122.417
+	)
+	Location.create( 
+	name: 'Old US Mint',
+	address: '155 Hermann St, San Francisco, CA 94103',
+	image: 'oldusmint.jpg',
+	place_id: 'ChIJfw7KU6KAhYARb4UBE7BbCyc',
+	lat: 37.7829,
+	lng: -122.4071
+	)
+	Location.create( 
+	name: 'The House from Full House',
+	address: 'Alamo Square, San Francisco, CA 94117',
+	image: 'alamosquare.jpg',
+	place_id: 'ChIJudgZRaWAhYARSP5xZKXpvV8',
+	lat: 37.776384,
+	lng: -122.434709
+	)
+	Location.create(
+	name: "San Francisco Giants",
+	address: "24 Willie Mays Plaza, San Francisco, CA 94107",
+	image: "at&tpark.jpg",
+	place_id: "ChIJ_T25cNd_j4ARehGmHe0pT84",
+	lat: 37.7785993,
+	lng: -122.3914585
+	)
+
+	Event.create(
 	title: "Bonds breaks home run record!",
 	year: "2007",
 	date: "08/07/07",
@@ -309,230 +533,6 @@ Event.create(
 	content: "The Alamo Square area contains the second largest concentration of homes over 10,000 square feet (930 m2) in San Francisco, after the Pacific Heights neighborhood.  Although pictured in the series Full House, no other filming for the show was done in the area.",
 	tag_art: true,
 	location_id: 25
-	)
-
-
-
-#   create_table "locations", force: :cascade do |t|
-#     t.decimal  "lat"
-#     t.decimal  "lng"
-#     t.string   "address"
-#     t.string   "name"
-#     t.string   "image"
-#     t.string   "place_id"
-#     t.datetime "created_at", null: false
-#     t.datetime "updated_at", null: false
-
-#============add locations seed data here=========
-Location.create( 
-	name: 'Ferry Building',
-	address: 'One Ferry Building San Francisco, California 94111',
-	image: 'ferrybuilding.png',
-	place_id: 'ChIJu1XQjGaAhYAR966C7JnAu5w',
-	lat: 37.7908,
-	lng: -122.4051
-	)
-Location.create( 
-	name: 'Coit Tower',
-	address: '1 Telegraph Hill Blvd, San Francisco, CA 94133',
-	image: 'coittower.png',
-	place_id: 'ChIJbyyyIfeAhYARmg3wBb7t4Ww',
-	lat: 37.8024,
-	lng: -122.4058
-	)
-Location.create( 
-	name: 'Transamerica Pyramid',
-	address: '600 Montgomery St, San Francisco, CA 94111',
-	image: 'transamerica.png',
-	place_id: 'ChIJu1XQjGaAhYAR966C7JnAu5w',
-	lat: 37.7952,
-	lng: -122.4028
-	)
-Location.create( 
-	name: 'Mission Dolores',
-	address: '320 Delores St, San Francisco, CA 94114',
-	image: 'missiondelores.jpg',
-	place_id: 'ChIJp3CqeRd-j4ARYI0i8e_kGKY',
-	lat: 37.7642,
-	lng: -122.4266
-	)
-
-Location.create( 
-	name: 'Ghirardelli Square',
-	address: '900 North Point St, San Francisco, CA 94109',
-	image: 'ghirardelli_square.jpg',
-	place_id: 'ChIJvXl2weCAhYARjSxnhzrBfNc',
-	lat: 37.805703,
-	lng: -122.421794
-	)
-Location.create( 
-	name: 'Columbus Tower',
-	address: '916 Kearny St, San Francisco, CA 94133',
-	image: 'columbustower.jpg',
-	place_id: 'ChIJbeBpw_SAhYARmR13AHfAV1I',
-	lat: 37.7964,
-	lng: -122.4049
-	)
-	Location.create( 
-	name: 'Cable Car Museum',
-	address: '1201 Mason St, San Francisco, CA 94108',
-	image: 'cablecarbarn.jpg',
-	place_id: 'ChIJX1oMlvKAhYARNZquwetszd8',
-	lat: 37.794675,
-	lng: -122.411396
-	)
-	Location.create( 
-	name: 'Conservatory of Flowers',
-	address: '100 John F Kennedy Dr, San Francisco, CA 94118',
-	image: 'conservatoryofflowers.jpg',
-	place_id: 'ChIJ5abCmkWHhYARH3zgiLVc_Ew',
-	lat: 37.7726,
-	lng: -122.4602
-	)
-	Location.create( 
-	name: 'Flood Mansion',
-	address: '1000 California St, San Francisco, CA 94115',
-	image: 'floodmansion.jpg',
-	place_id: 'ChIJjaNJDsWAhYARpTzMWrvuiEI',
-	lat: 37.792,
-	lng: -122.4114
-	)
-	Location.create( 
-	name: "Lotta's Fountain",
-	address: 'Kearny St, San Francisco CA 94105',
-	image: 'lottafountain.jpg',
-	place_id: 'ChIJ-zVUQoiAhYAREEBQ1oqGsiE',
-	lat: 37.7879,
-	lng: -122.4033
-	)
-	Location.create( 
-	name: 'California Historical Society',
-	address: '2090 Jackson St, San Francisco, CA 94105',
-	image: 'whittiermansion.jpg',
-	place_id: 'ChIJx2NZ-IeAhYARwOHJPBZJJBA',
-	lat: 37.7933,
-	lng: -122.4295
-	)
-	Location.create( 
-	name: 'War Memorial Opera House',
-	address: '301 Wan Ness Ave, San Francisco, CA 94109',
-	image: 'warmemorial.jpg',
-	place_id: 'ChIJ7UVGDpmAhYARBt5goMZ-AO0',
-	lat: 37.464483,
-	lng: -122.251364
-	)
-	Location.create( 
-	name: 'Palace of Fine Arts',
-	address: '3701 Lyon St, San Francisco, CA 94123',
-	image: 'palaceoffinearts.jpg',
-	place_id: 'ChIJRb6WFtWGhYARLN9EOlXR2JI',
-	lat: 37.8029,
-	lng: -122.4484
-	)
-	Location.create( 
-	name: 'Orpheum Theatre',
-	address: '1192 Market St, San Francisco, CA 94102',
-	image: 'orpheumtheater.jpg',
-	place_id: 'ChIJ76ERUo6AhYARr8LiSU5hciU',
-	lat:  37.779081,
-	lng: -122.414708
-	)
-	
-	Location.create( 
-	name: 'Golden Gate Park',
-	address: '1232 John F Kennedy Dr, San Francisco, CA 94121',
-	image: 'goldengatepark.jpg',
-	place_id: 'ChIJY_dFYHKHhYARMKc772iLvnE',
-	lat: 37.77064,
-	lng: -122.46749
-	)
-	Location.create( 
-	name: 'The Castro Theatre',
-	address: '429 Castro St, San Francisco, CA 94114',
-	image: 'castrotheater.jpg',
-	place_id: 'ChIJeWH4Txt-j4ARJZQ5pivU-hQ',
-	lat: 37.7620,
-	lng: -122.435
-	)
-	Location.create( 
-	name: 'San Francisco Armory',
-	address: '1800 Mission St, San Francisco, CA 94103',
-	image: 'armoryandarsenal.jpg',
-	place_id: 'ChIJOQnmcSF-j4ARqbgcqD6DI_k',
-	lat: 37.767778,
-	lng: -122.420556
-	)
-	Location.create( 
-	name: 'Grace Cathedral',
-	address: '1051 Taylor St, San Francisco, CA 94108',
-	image: 'gracecathedral.jpg',
-	place_id: 'ChIJY0dQvZKAhYARcB4643GOKCE',
-	lat: 37.4730,
-	lng: -122.2447
-	)
-	Location.create( 
-	name: 'Beach Chalet',
-	address: '100 Great Highway, San Francisco, CA 94121',
-	image: 'beachchalet.jpg',
-	place_id: 'ChIJ1ShzE7mHhYARnIi1rffKeVc',
-	lat: 37.7695189,
-	lng: -122.5124006
-	)
-	Location.create( 
-	name: 'Fairmont Hotel',
-	address: '950 Mason St, San Francisco, CA 94108',
-	image: 'fairmont.jpg',
-	place_id: 'ChIJN2S4EI2AhYAR9J4Qeh1U8Aw',
-	lat: 37.7924,
-	lng: -122.4106
-	)
-	Location.create( 
-	name: 'Spreckles Mansion',
-	address: '2080 Washington St, San Francisco, CA 94109',
-	image: 'sprecklesmansion.jpg',
-	place_id: 'ChIJTzY5cMGAhYARrhOKjfwFtp0',
-	lat: 37.7927372,
-	lng: -122.4297243
-	)
-	Location.create( 
-	name: 'El Capitan Theater and Hotel',
-	address: '2353 Mission St, San Francisco, CA 94110',
-	image: 'elcapitantheater.jpg',
-	place_id: 'ChIJByNqcjx-j4ARADcHb-u2dX0',
-	lat: 37.7592471,
-	lng: -122.4211824
-	)
-	Location.create( 
-	name: 'Golden Gate Bridge',
-	address: 'Golden Gate Bridge, San Francisco CA 94129',
-	image: 'goldengate.jpg',
-	place_id: ' ChIJw____96GhYARCVVwg5cT7c0',
-	lat: 37.7986,
-	lng: -122.417
-	)
-	Location.create( 
-	name: 'Old US Mint',
-	address: '155 Hermann St, San Francisco, CA 94103',
-	image: 'oldusmint.jpg',
-	place_id: 'ChIJfw7KU6KAhYARb4UBE7BbCyc',
-	lat: 37.7829,
-	lng: -122.4071
-	)
-	Location.create( 
-	name: 'The House from Full House',
-	address: 'Alamo Square, San Francisco, CA 94117',
-	image: 'alamosquare.jpg',
-	place_id: 'ChIJudgZRaWAhYARSP5xZKXpvV8',
-	lat: 37.776384,
-	lng: -122.434709
-	)
-	Location.create(
-	name: "San Francisco Giants",
-	address: "24 Willie Mays Plaza, San Francisco, CA 94107",
-	image: "at&tpark.jpg",
-	place_id: "ChIJ_T25cNd_j4ARehGmHe0pT84",
-	lat: 37.4643,
-	lng: -122.2321
 	)
 #============add users seed data here=========
 #   create_table "users", force: :cascade do |t|

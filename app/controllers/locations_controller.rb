@@ -10,4 +10,9 @@ class LocationsController < ApplicationController
 		redirect_to "/events"
 	end
 
+	def showOne
+		@location = Location.find(params[:id])
+		
+	end
+
 end
