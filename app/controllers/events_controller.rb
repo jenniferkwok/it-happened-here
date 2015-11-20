@@ -5,8 +5,10 @@ class EventsController < ApplicationController
 	def index
 		@events = Event.all
 		@locations = Location.all
+		@users = User.all
 		gon.locations = @locations
 		gon.quickEvents = @events
+
 	end
 
 	def new

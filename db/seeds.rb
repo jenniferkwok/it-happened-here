@@ -536,88 +536,96 @@ Event.create(
 	)
 #============add users seed data here=========
 #   create_table "users", force: :cascade do |t|
-#     t.string   "username"
-#     t.string   "email"
-#     t.string   "password_digest"
-#     t.string   "image"
-#     t.string   "about"
-#     t.datetime "created_at",      null: false
-#     t.datetime "updated_at",      null: false
+    # t.string   "username"
+    # t.string   "image"
+    # t.string   "about"
+    # t.datetime "created_at",                          null: false
+    # t.datetime "updated_at",                          null: false
+    # t.string   "email",                  default: "", null: false
+    # t.string   "encrypted_password",     default: "", null: false
+    # t.string   "reset_password_token"
+    # t.datetime "reset_password_sent_at"
+    # t.datetime "remember_created_at"
+    # t.integer  "sign_in_count",          default: 0,  null: false
+    # t.datetime "current_sign_in_at"
+    # t.datetime "last_sign_in_at"
+    # t.inet     "current_sign_in_ip"
+    # t.inet     "last_sign_in_ip"
 
 	User.create(
 		username: "JohnMason",
 		email: "jpmason@therock.com ",
-		encrypted_password: "sean",
+		encrypted_password: "seanconnery",
 		image: "seanconnery.jpg",
 		about: "Spent a lot of time looking at San Francisco from the best little window ever."
 		)
 	User.create(
 		username: "Goodspeed1",
 		email: "stanley@fbi.gov",
-		encrypted_password: "nicolas",
+		encrypted_password: "nicolascage",
 		image: "niccage.jpg",
 		about: "First visit and it was a gas.  Saw everything in a single drive."
 		)
 	User.create(
 		username: "InspectorSteve",
 		email: "skeller@sfpd.gov",
-		encrypted_password: "michael",
+		encrypted_password: "michaeldouglas",
 		image: "michaeldouglas.jpg",
 		about: "The streets of San Francisco have always been paved with gold, or as we say, the hearts of its people."
 		)
 	User.create(
 		username: "Reggie48",
 		email: "rhammond@penalsystem.org",
-		encrypted_password: "eddie",
+		encrypted_password: "eddiemurphy",
 		image: "eddiemurphy.jpg",
 		about: "If you have two days to spend in San Francisco, stay up for the nightlife."
 		)
 	User.create(
 		username: "cadillac76",
 		email: "jcates@sfpd.gov",
-		encrypted_password: "nick",
+		encrypted_password: "nickcage",
 		image: "nicknolte.jpg",
 		about: "Cable cars are a must.  So is a gas guzzling convertible with rust all over."
 		)
 	User.create(
 		username: "antman2",
 		email: "slang@notacriminal.com",
-		encrypted_password: "paul",
+		encrypted_password: "paulrudd",
 		image: "paulrudd.jpg",
 		about: "To truly enjoy San Francisco, you have to take time to admire all the small things."
 		)
 	User.create(
 		username: "untidyharry",
 		email: "dirtyboy@sfpd.gov",
-		encrypted_password: "clint",
+		encrypted_password: "clinteastwood",
 		image: "clinteastwood.jpg",
 		about: "Plan to enjoy everything, but don't overplan.  Really look at your plan and ask yourself if you feel lucky."
 		)
 	User.create(
 		username: "amytan",
 		email: "ihatemymother@gmail.com",
-		encrypted_password: "amy",
+		encrypted_password: "amytantan",
 		image: "amytan.jpg",
 		about: "A true shopping adventure cannot happen without visiting Chinatown."
 		)
 	User.create(
 		username: "englishnanny1",
 		email: "doubtfire@williams.com",
-		encrypted_password: "robin",
+		encrypted_password: "robinwilliams",
 		image: "robinwilliams.jpg",
 		about: "Watch out for the run by fruities."
 		)
 	User.create(
 		username: "hateheights",
 		email: "sferguson@sfpd.com",
-		encrypted_password: "james",
+		encrypted_password: "jamesstewart",
 		image: "jamesstewart.jpg",
 		about: "Love the streets, the metro, the piers.  Not so much the rooftop views."
 		)
 	User.create(
 		username: "zodiac22",
 		email: "incognito@sfchronicle.com",
-		encrypted_password: "jake",
+		encrypted_password: "jakegylenhall",
 		image: "jakegylenhall.jpg",
 		about: "Any walk in any park is a great time to be had.  Try it at night."
 		)
