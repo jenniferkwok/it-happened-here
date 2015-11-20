@@ -247,8 +247,8 @@ Location.create(
 	address: "24 Willie Mays Plaza, San Francisco, CA 94107",
 	image: "at&tpark.jpg",
 	place_id: "ChIJ_T25cNd_j4ARehGmHe0pT84",
-	lat: 37.4643,
-	lng: -122.2321
+	lat: 37.7785993,
+	lng: -122.3914585
 	)
 
 	Event.create(
