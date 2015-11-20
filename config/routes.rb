@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get '/about', to: 'pages#about'
+  get '/team' , to: 'pages#team'
+  get '/community', to: 'pages#community'
+
   # devise_for :users
 devise_for :users, controllers: {
    sessions: 'users/sessions'
