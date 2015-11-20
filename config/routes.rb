@@ -2,13 +2,14 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/team' , to: 'pages#team'
   get '/community', to: 'pages#community'
+  get '/home', to: 'pages#home'
 
   # devise_for :users
 devise_for :users, controllers: {
    sessions: 'users/sessions'
 }
 
-root to: 'events#index'
+root to: 'pages#home'
 
 resources :events do
   resources :locations do
