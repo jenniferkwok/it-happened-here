@@ -6,6 +6,7 @@ class EventsController < ApplicationController
 		@events = Event.all
 		@locations = Location.all
 		gon.locations = @locations
+		gon.quickEvents = @events
 	end
 
 	def new
