@@ -1,0 +1,12 @@
+<% @users.each do |u| %>
+	<div class= "col-md-6">
+	Username: <%= u.username %></h1>
+	Email: <%= u.email %><br>
+	<%= u.about %><br>
+	
+	<img src="/assets/<%= u.image %>" class="user-image" /img>
+	<br>
+	
+	</div>
+<% end %>
+
