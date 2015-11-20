@@ -1,14 +1,19 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+body{
+	margin: 0 auto;
+	padding: 40px;
+}
 .event-image {
+	filter: sepia(100%);
 	height: 120px;
 	width: auto;
 	display: block;
 }
 
 .location-image {
+	filter: grayscale(70%);
 	height: 120px;
 	width: auto;
 	display: block;

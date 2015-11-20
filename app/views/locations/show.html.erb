@@ -1,11 +1,13 @@
 <% @locations.each do |l| %>
+
 	<div class= "col-md-6">
-	Lat is: <%= l.lat %></h1>
-	Lng is: <%= l.lng %><br>
-	<%= l.address %><br>
-	<%= l.name %><br>
+	<div class="well text-center">
+	<h1><%= l.name %></h1>
+		<%= l.address %><br>
+	Latitude: <%= l.lat %><br>
+	Longitude: <%= l.lng %><br>
 	<img src="/assets/<%= l.image %>" class="location-image" /img>
-	<%= l.place_id %><br>
-	<%= l.created_at %>
+	Location added: <%= l.created_at %>
+	</div>
 	</div>
 <% end %>
