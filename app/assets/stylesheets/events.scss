@@ -24,5 +24,7 @@ body{
 }
 
 #showEvents:hover {
-	transform: translateY(-70px);
+	// transform: translateY(-70px);
+	// -webkit-animation-timing-function: ease-in-out;
+	// animation-duration: 1s;
 }
