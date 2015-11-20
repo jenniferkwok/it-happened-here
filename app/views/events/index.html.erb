@@ -59,7 +59,8 @@ function loadData (){
           $('#showEvents').slideDown( "slow", function() {
           // Animation complete.
 
-          $('#showEvents').append('<p>' + e.content + '</p>');
+          // When marker clicked, append event content to bottom of page and add class to div for location id
+          $('#showEvents').append('<p>' + e.content + '</p>').addClass('' + e.location_id + '');
         });
           
         } 
@@ -71,6 +72,11 @@ function loadData (){
     });
 }
  }
+
+ // Go to location page when event is clicked on
+ $('#showEvents').on('click', function() {
+    window.location.href = '/locations/' + $(this).attr('class');
+ });
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
