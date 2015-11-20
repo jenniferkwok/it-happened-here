@@ -29,19 +29,20 @@ function initialize() {
     });
 
 
-    var london = new google.maps.LatLng(51.51, -0.127);
-    var londonmarker = new google.maps.Marker({
-        position: london,
-        map: map
-    });
 
+        loadData();
+        //gon.watch renews data in gon variables!
+        gon.watch;
+
+function loadData (){
+ gon.locations.forEach(function(location){
     var locationLatLong = new google.maps.LatLng(location.lat, location.lng);
     var marker = new google.maps.Marker({
         position: locationLatLong,
         map: map
     });
-
-// gon.locations.forEach(function(location){
+    });
+}
 
 //     var request = {
 //     	placeId: location.place_Id
@@ -65,7 +66,6 @@ function initialize() {
 //                 infowindow.open(map, this);
 //             });
 //         }
-//     });
 //     });
  }
 
