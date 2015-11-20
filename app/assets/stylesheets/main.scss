@@ -16,17 +16,18 @@ img{
 
 }
 
-a:link{
-	
+button:link{
+	color: white;
 }
-a:hover{
-	
+button:hover{
+	color: white;
 }
 a:visited{
 	color: white;
 }
-a:active{
-	
+button:active{
+  background-color: black;
+  color:white;
 }
 button {
 	background-color: #3c3b58;
@@ -36,9 +37,7 @@ button {
 	text-decoration: none;
 }
 
-button:active{
-	background-color: black;
-}
+
 /* Wobble Vertical */
 @-webkit-keyframes hvr-wobble-vertical {
   16.65% {
@@ -123,5 +122,5 @@ button:active{
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
->>>>>>> master
+
 }
