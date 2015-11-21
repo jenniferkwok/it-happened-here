@@ -18,7 +18,12 @@ body{
 }
 
 img{
-	-webkit-filter: sepia(70%)
+	-webkit-filter: sepia(70%);
+  -webkit-align-self: center;
+  align-self: center;
+  position: center;
+  margin-right: auto;
+  margin-left: auto;
 
 }
 
