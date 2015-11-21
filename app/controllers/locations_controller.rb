@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-
+	before_filter :authenticate_user!, :except => [:show, :showOne]
 	def show
 		@locations = Location.all 
 	end
