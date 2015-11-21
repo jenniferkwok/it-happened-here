@@ -14,14 +14,13 @@ body{
 
 #map{
 	-webkit-filter: grayscale(50%);
-
 }
 
 img{
 	-webkit-filter: sepia(70%);
   margin-right: auto;
   margin-left: auto;
-
+  border-radius: 8px;
 }
 
 button:link{
@@ -44,6 +43,7 @@ button {
 	border-radius: 20px;
 	text-decoration: none;
 }
+
 
 /* Wobble Vertical */
 @-webkit-keyframes hvr-wobble-vertical {
@@ -131,3 +131,4 @@ button {
   animation-iteration-count: 1;
 
 }
+

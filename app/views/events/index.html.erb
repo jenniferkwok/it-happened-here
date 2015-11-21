@@ -11,8 +11,9 @@
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
 <br>
+<%if current_user%>
 <button class="hvr-wobble-vertical"><a  href="/events/new">Add a Historical Event</a></button>
-
+<% end %>
 <div id = "showEvents"></div>
 
 <script src="http://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places"></script>
