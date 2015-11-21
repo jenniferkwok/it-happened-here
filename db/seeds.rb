@@ -67,7 +67,7 @@ Location.create(
 Location.create( 
 	name: 'Mission Dolores',
 	address: '320 Delores St, San Francisco, CA 94114',
-	image: 'missiondelores.jpg',
+	image: 'missiondelores.JPG',
 	place_id: 'ChIJp3CqeRd-j4ARYI0i8e_kGKY',
 	lat: 37.7642,
 	lng: -122.4266
@@ -108,7 +108,7 @@ Location.create(
 	Location.create( 
 	name: 'Flood Mansion',
 	address: '1000 California St, San Francisco, CA 94115',
-	image: 'floodmansion.jpg',
+	image: 'floodmansion.JPG',
 	place_id: 'ChIJjaNJDsWAhYARpTzMWrvuiEI',
 	lat: 37.792,
 	lng: -122.4114
@@ -124,7 +124,7 @@ Location.create(
 	Location.create( 
 	name: 'California Historical Society',
 	address: '2090 Jackson St, San Francisco, CA 94105',
-	image: 'whittiermansion.jpg',
+	image: 'whittiermansion.JPG',
 	place_id: 'ChIJx2NZ-IeAhYARwOHJPBZJJBA',
 	lat: 37.7933,
 	lng: -122.4295
@@ -189,7 +189,7 @@ Location.create(
 	Location.create( 
 	name: 'Beach Chalet',
 	address: '100 Great Highway, San Francisco, CA 94121',
-	image: 'beachchalet.jpg',
+	image: 'beachchalet.JPG',
 	place_id: 'ChIJ1ShzE7mHhYARnIi1rffKeVc',
 	lat: 37.7695189,
 	lng: -122.5124006
