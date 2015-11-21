@@ -1,27 +1,51 @@
+<div class="backfill">
 <h1>Hello world!</h1>
 <h3>Welcome, user!!!! </h3>
+
+<div class="text-center">
+
 <h5> <span id="yourlocation"></span></h5>
+
 
 <div>
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
-
-<a href="/events/new">Add a Historical Event</a>
+<br>
+<button class="hvr-wobble-vertical"><a  href="/events/new">Add a Historical Event</a></button>
 
 <div id = "showEvents"></div>
+
+<script src="http://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places"></script>
 
 <script type="text/javascript">
 
 function initialize() {
      var map = new google.maps.Map(document.getElementById('map'), {
      zoom: 14,
-      // center: new google.maps.LatLng(37.790841, -122.42),
+      center: new google.maps.LatLng(37.790841, -122.42),
+      styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#f7ded9"},{"visibility":"on"}]}]
     });
 
      if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(function (position) {
              initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
              map.setCenter(initialLocation);
+             map.setZoom(16);
+
+    var marker = new google.maps.Marker({
+    	icon: {url :'/assets/youarehere150.png',
+    	height:10},
+    	// icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFBB00',
+        position: initialLocation,
+        map: map
+    });
+      var infowindow = new google.maps.InfoWindow({
+    content: "You are here"
+  });
+      marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });     
+
   //api location name
 	getLocationName();
 
@@ -48,10 +72,13 @@ function loadData (){
  gon.locations.forEach(function(location){
     var locationLatLong = new google.maps.LatLng(location.lat, location.lng);
     var marker = new google.maps.Marker({
+    	icon: {
+    		url: '/assets/point60.png'
+    	},
         position: locationLatLong,
         map: map
-    });
 
+    });
 
     google.maps.event.addListener(marker, 'click', function() {
       $('#showEvents').empty();
@@ -63,6 +90,7 @@ function loadData (){
 
           // When marker clicked, append event content to bottom of page and add class to div for location id
           $('#showEvents').append('<p>' + gon.locations[e.location_id].name + '</p>' + '<p>' + e.content + '</p>').addClass('' + e.location_id + '');
+
         });
         } 
       });
@@ -79,3 +107,6 @@ function loadData (){
 google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
+
+</div>
+</div>
