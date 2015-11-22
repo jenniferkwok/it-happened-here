@@ -1,3 +1,29 @@
+
+<style type="text/css">#lower {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+}
+
+#jump {
+    display: none;
+    background-color: #aaaaaa;
+    padding: 10px;
+}
+#BusyBox
+{
+	background-color: red;
+bottom: 0;
+/*left: 50%;*/
+/*margin-left: -45px;*/
+/*padding-top: 20px;*/
+position: fixed;
+margin-bottom: -70px;
+}
+
+
+</style>
+
 <div class="backfill">
 <h1>Hello world!</h1>
 <h3>Welcome, user!!!! </h3>
@@ -13,11 +39,17 @@
 <br>
 <button class="hvr-wobble-vertical"><a  href="/events/new">Add a Historical Event</a></button>
 
-<div id = "showEvents"></div>
+<section id = "showEvents"></section>
+
+
 
 <script src="http://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places"></script>
 
 <script type="text/javascript">
+$(document).ready(function() {
+    $('#fullpage').fullpage();
+});
+
 
 function initialize() {
      var map = new google.maps.Map(document.getElementById('map'), {
@@ -80,33 +112,93 @@ function loadData (){
 
     });
 
+//brings to single location
+
+ //   google.maps.event.addListener(marker, 'click', function() {
+      // window.location.href = '/locations/' + location.id;
+
+
     google.maps.event.addListener(marker, 'click', function() {
       $('#showEvents').empty();
-      
+      $('#showEvents').append('<p>' + e.title + '</p>' + '<p>' + e.content + '</p>').addClass('' + e.location_id + '');
+
+
+    $('html, body').animate({
+        scrollTop: $("#showEvents").offset().top
+    }, 2000);
+
+
+  // $('a[href*=#]:not([href=#])').click(function() {
+  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  //     var target = $(this.hash);
+  //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  //     if (target.length) {
+  //       $('html,body').animate({
+  //         scrollTop: target.offset().top
+  //       }, 1000);
+  //       return false;
+  //     }
+  //   }
+  // });
+
+
+
+               // $("#map").slideUp( 'slow', function(){ 
+                            // $('section').text('<p>' + e.title + '</p>' + '<p>' + e.content + '</p>').addClass('' + e.location_id + '');
+
+
+                  // $("section").text('Slide Up Transition Complete');
+               // });
+
       gon.quickEvents.forEach(function(e){
         if (e.location_id == location.id) {
-          $('#showEvents').slideDown( "slow", function() {
+          // $('#showEvents').slideDown( "slow", function() {
           // Animation complete.
 
           // When marker clicked, append event content to bottom of page and add class to div for location id
-          $('#showEvents').append('<p>' + gon.locations[e.location_id].name + '</p>' + '<p>' + e.content + '</p>').addClass('' + e.location_id + '');
 
-        });
+        // });
         } 
       });
     });
+
+
+  //  });
+
+
     });
 }
  }
 
- // Go to location page when event is clicked on
- $('#showEvents').on('click', function() {
-    window.location.href = '/locations/' + $(this).attr('class');
- });
+ // // Go to location page when event is clicked on
+ // $('#showEvents').on('click', function() {
+ //    window.location.href = '/locations/' + $(this).attr('class');
+ // });
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-</script>
+    // $("#toggle").click(function(){
+    //     $("#jump").slideToggle("fast");
+    // });
 
-</div>
-</div>
+        // var flag = 1;
+
+        // $("#Process").click(function () {
+        //     if (flag == 1) {
+        //         $('#BusyBox').stop(true).animate({ 'margin-bottom': 0, 'opacity': '1' }, { queue: false, duration: 300 });
+        //         flag = 0;
+        //     }
+        //     else {
+        //         $('#BusyBox').stop(true).animate({ 'margin-bottom': -70, 'opacity': '0' }, { queue: false, duration: 300 });
+        //         flag = 1;
+        //     }
+
+        //     return false;
+        // });
+
+    // $("marker").click(function(){
+    //     $("section").slideUp();
+    // });
+
+
+</script>
