@@ -2,8 +2,8 @@ class UsersController < ApplicationController
 
 
 	# before_action :authenticate_user!
+before_filter :authenticate_user!, :except => [:new]
 
-	before_filter :authenticate_user!
 
 	user_signed_in?
 	current_user
