@@ -1,16 +1,18 @@
 
-
-body{
+body, input{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
+	font-size: 18px;
 }
 
 h1{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 50px;
+	padding-bottom: 20px;
 }
-p, input, textarea{
+p{
 	font-family: 'Lora', serif;
+	color: white;
+
 }
 
 /*SECTION*/
@@ -28,9 +30,6 @@ section header{
 	margin-bottom: 80px;
 }
 
-p{
-	color: white;
-}
 
 address{
 	margin-bottom: 50px;
@@ -44,13 +43,20 @@ address span{
 }
 
 a{
-	color: #A9B262;
+	color: white;
+	text-transform: uppercase;
 }
 
 a:hover,
 a:focus{
 	color: #A9B262;
 }
+
+ 
+ .container {
+ 	padding-top: 0px;
+
+ }  
 
 .logo{
 	background: url('./logo.png');
@@ -130,11 +136,34 @@ a:focus{
     text-align: center;
    
  }
- 
- .container {
- 	padding-top: 50px;
 
- }   
+ #banner-login {
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-image: url('login-bg.jpg');
+    background-position: 100%;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+    background-size: cover;
+    width: 100%;
+	height: 700px;
+    color: white;
+    cursor: default;
+    padding: 6em 0px;
+    text-align: center;
+ }
+ 
+  #banner-signup {
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-image: url('signup-bg.jpg');
+    background-position: 100%;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+    background-size: cover;
+    width: 100%;
+	height: 950px;
+    color: white;
+    cursor: default;
+    padding: 6em 0px;
+    text-align: center;
+ }
 
 
 
@@ -294,6 +323,7 @@ form{
 }
 .form-control{
 	padding: 17px 25px;
+	font-family: 'Lora', serif;
 	font-size: 15px;
 	height: auto;
 	border-radius: 0;
@@ -358,9 +388,15 @@ ul.social-icons > li > a{
 
 /* Button */
 
+.small-btn {
+	border-radius: 0;
+	background: #A9B262;
+	border-width: 3px;
+	border-color: #A9B262;
+
+}
 .btn{
 	padding: 15px 30px;
-
 	border-bottom-color: none;
 	margin color: none;
 	border-radius: 0;
