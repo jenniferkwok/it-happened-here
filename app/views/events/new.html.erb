@@ -1,15 +1,18 @@
-this is for new events!
+<div class="container">
+<div class="row">
+<div col-md-6 text-center>
 
 
-<div class= "panel" id ="eventform">
+<div class= "form-control" >
 
 <h1>Add a Historical Event</h1>
 <hr>
 <%= form_for @event do |f| %>
-<div>
+<form>
+<div class="form-group form-control">
 Title of event:
 <%= f.text_field :title, placeholder: "Title" %>
-</div>
+
 <div>
 Year:
 <%= f.number_field :year %>
@@ -23,6 +26,7 @@ Date:
 	<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
   		Add Location
 	</button>
+	
 </div>
 <div>
 Link:
@@ -79,11 +83,16 @@ Tags:<br>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add</button>
+        <button type="button" class="btn btn-default form-group" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary form-group">Add</button>
+      </div>
+		</form>
+      </div>
       </div>
     </div>
   </div>
 </div>
-
+</div>
+</div>
+</div>
 </div>
