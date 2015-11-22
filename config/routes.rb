@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get '/about', to: 'pages#about'
-  get '/team' , to: 'pages#team'
   get '/community', to: 'pages#community'
   get '/home', to: 'pages#home'
 
