@@ -21,11 +21,9 @@
 		<!-- Offsite navigation -->
 		<nav class="menu">
 			<a href="#" class="close"><i class="fa fa-close"></i></a>
-			<h3>Menu</h3>
+			
 			<ul class="nav">
 				<li><%= link_to "HOME", events_path, method: :get%></li>
-				
-				
 				<li><%= link_to "COMMUNITY", community_path, method: :get%></li>
 				<li><%= link_to "ABOUT", about_path, method: :get%></a></li>
 				
@@ -33,6 +31,7 @@
 				<li><%= link_to "SIGN UP", new_user_registration_path, method: :get%></li>
 				 <li><%= link_to "LOGIN", new_user_session_path, method: :get%></li>
 				<% end %>
+				
 				<% if current_user %>
 				<li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
 				<% end %>
