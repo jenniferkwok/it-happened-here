@@ -6,6 +6,7 @@ margin-bottom: 200px;
 }
   #map{
   -webkit-filter: sepia(30%);
+  border: double 5px black;
 }
 </style>
 
@@ -19,10 +20,12 @@ margin-bottom: 200px;
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
-      <div id="map" style='height: 400px;'></div>
-      <!-- <div id="map" style='width: 800px; height: 400px;'></div> -->
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div id="map" style=' height: 400px;'></div>
     </div>
+        <div class="col-md-1"></div>
+
   </div>
 
 <br>
@@ -88,7 +91,7 @@ function loadData (){
     var locationLatLong = new google.maps.LatLng(location.lat, location.lng);
     var marker = new google.maps.Marker({
     	icon: {
-    		url: '/assets/point60.png'
+    		url: '/assets/pocketwatch50.png'
     	},
         position: locationLatLong,
         map: map
