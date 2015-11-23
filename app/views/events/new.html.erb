@@ -6,59 +6,58 @@
 		<h2>Add A Historical Event</h2>
 
 		<%= form_for @event do |f| %>
-		<form>
-
-			<form class="row">
-				<div class="form-group">
-					<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
-				</div>
-				<h5>Choose a Date - required</h5>
-				<div class="form-group">
-					<%= f.date_field :date, placeholder: "Choose a Date", :prompt => :month, class: 'form-control'%>
-				</div><hr>
-				 Pick a location<br>
-				<span class="form-group">
-					<%= f.collection_select(:location_id, Location.all, :id, :name) %> 
-				</span>
-					 &nbsp|&nbsp &nbsp OR &nbsp &nbsp|&nbsp
-				<!-- Button trigger modal to add location-->
-				<span class= "hvr-wobble-vertical">
-					<span class="hv"></span><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-					ADD  A NEW LOCATION
-				</button>
+			<div class="form-group">
+				<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
+			</div>
+			<h5>Choose a Date - required</h5>
+			<div class="form-group">
+				<%= f.date_field :date, placeholder: "Choose a Date", :prompt => :month, class: 'form-control'%>
+			</div>
+			<hr>
+			Pick a location
+			<br>
+			<span class="form-group">
+				<%= f.collection_select(:location_id, Location.all, :id, :name) %> 
 			</span>
-		<hr>
+			&nbsp|&nbsp &nbsp OR &nbsp &nbsp|&nbsp
+			<!-- Button trigger modal to add location-->
+			<span class= "hvr-wobble-vertical">
+				
+				<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+				ADD  A NEW LOCATION</button>
+			</span>
+			<hr>
 	
-		<div class="form-group">
-			<%= f.text_field :link, placeholder: "Link URL (optional)", class: 'form-control' %>
-		</div>
+			<div class="form-group">
+				<%= f.text_field :link, placeholder: "Link URL (optional)", class: 'form-control' %>
+			</div>
 
-		<div class="form-group">
-			<%= f.text_field :image, placeholder: "Image URL (optional)", class: 'form-control' %>
-		</div>
+			<div class="form-group">
+				<%= f.text_field :image, placeholder: "Image URL (optional)", class: 'form-control' %>
+			</div>
 
-		<div class="form-group">
-			<%= f.text_area :content, placeholder: "Tell us about this event", class: 'form-control' %>
-		</div>
-		<hr>
-		Tag your Event<br>
-		<div class="form-group">
-			
-			<%= f.check_box :tag_art  %> Art and Culture
-			<%= f.check_box :tag_people  %> People
-			<%= f.check_box :tag_science  %> Science
-			<%= f.check_box :tag_politics  %> Politics
-			<%= f.check_box :tag_conflict  %> Conflict
-			<%= f.check_box :tag_nature  %> Nature
-			<%= f.check_box :tag_sports  %> Sports
-		</div>
-		<hr>
-		<div class= "hvr-wobble-vertical">
-			<%= f.submit "SUBMIT", class: "btn btn-primary" %>
-		</div>
+			<div class="form-group">
+				<%= f.text_area :content, placeholder: "Tell us about this event", class: 'form-control' %>
+			</div>
+			<hr>
+			Tag your Event<br>
+			<div class="form-group">
+				
+				<%= f.check_box :tag_art  %> Art and Culture
+				<%= f.check_box :tag_people  %> People
+				<%= f.check_box :tag_science  %> Science
+				<%= f.check_box :tag_politics  %> Politics
+				<%= f.check_box :tag_conflict  %> Conflict
+				<%= f.check_box :tag_nature  %> Nature
+				<%= f.check_box :tag_sports  %> Sports
+			</div>
+			<hr>
+			<div class= "hvr-wobble-vertical">
+				<%= f.submit "SUBMIT", class: "btn btn-primary" %>
+			</div>
 		<% end %>
 
-
+	</div>
 
 	
 
@@ -67,7 +66,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-				<div class="modal-header">
+			<div class="modal-header">
 				<h3>Add A Historical Event</h3>
 
 				<div class="modal-body">
@@ -106,6 +105,7 @@
 
 		</div>
 	</div>
+</div>
 </div>
 
 </section>

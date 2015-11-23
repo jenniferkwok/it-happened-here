@@ -4,6 +4,10 @@ class LocationsController < ApplicationController
 		@locations = Location.all 
 	end
 
+	def new
+		@location = Location.new
+	end
+
 	def create
 		location_params = params.require(:location).permit(:name, :address, :image)
 		@location = Location.create(location_params)

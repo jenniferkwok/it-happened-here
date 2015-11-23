@@ -19,9 +19,12 @@ class EventsController < ApplicationController
 	def create
 		id = params[:id]
 		event_params = params.require(:event).permit(:title, :year, :date, :link, :image, :content, :tag_art, :tag_people, :tag_science, :tag_politics, :tag_conflict, :tag_nature, :tag_sports, :location_id)
+		@location = event_params[:location_id]
 		@event = Event.new(event_params)
 		@event.save
-		redirect_to event_path(event.id)
+		print 'event created -- OOOOOOOO'
+		redirect_to event_id
+		
 	end
 	def destroy
 		id params[:id]
