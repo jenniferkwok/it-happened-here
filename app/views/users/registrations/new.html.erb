@@ -1,11 +1,8 @@
-
-
 <section id= "banner-signup"> 
-
 
     <div class="container">
 
-        <h1>Sign Up</h1>
+        <h2>Sign Up</h2>
         <p>SIGN UP TO CHECK OUT OUR MAP AND ADD YOUR OWN EVENTS.</p>
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -30,8 +27,8 @@
                       <%= f.submit "SIGN UP", class: "btn btn-primary" %>
                       </div>
                       <% end %>
-
-              <%= render "users/shared/links" %>
+ 
+              <%= render "users/shared/links" %> 
           </form>
     </div>
   

@@ -1,6 +1,7 @@
 
 <section id= "banner-paper"> 
 
+
 <style type="text/css">  img{
   -webkit-filter: sepia(70%);
   margin-right: auto;
@@ -11,7 +12,8 @@
 
 <% @locations.each do |l| %>
 
-	<div class= "col-md-6">
+	<section id="portfolio" class="darker">
+	<div class= "container">
 	<div class="well text-center">
 	<h1><%= l.name %></h1>
 		<%= l.address %><br>
@@ -24,4 +26,4 @@
 
 <% end %>
 </section>
-
+</section>
