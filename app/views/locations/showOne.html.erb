@@ -19,7 +19,7 @@ hr{
 
   background: 
     linear-gradient(
-      rgba(242, 200, 178, 0.7),
+      rgba(242, 200, 178, 0.6),
       rgba(242, 200, 178, 0.7)
     ),
     url(/assets/paper-bg.jpg);
@@ -34,7 +34,7 @@ hr{
 	<% @events.each do |event| %>
         <div class="collapse-group"><a class="expand" href="#">
           <h4><%= event.year %> - <u><%= event.title %></u>
-          <img class="hand" src="https://openclipart.org/image/2400px/svg_to_png/183195/pointing-hand.png" width="30"></a></h4>
+          <img class="hand" src="/assets/pointingright.png" width="30"></a></h4>
            <p class="collapse"> <%= event.content %> </p>
         </div>
 	<% end %>
