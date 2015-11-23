@@ -1,9 +1,57 @@
-<h1>What happened in ... <%= @location.name %>?</h1>
-<p>
-	<% @events.each do |event| %>
-	<div>
-	<h5><%= event.year %> - <%= event.title %></h5>
-	</div>
 
+<section id= "banner-paper"> 
+
+<style type="text/css">
+    h3, a{font-family: 'Playfair Display', serif; color: black}
+}
+h2{font-family: 'Playfair Display SC', serif; font-weight: bold}
+hr{    
+	border: 0;
+    border-bottom: 1px double #8E1F1D;;}
+.rotate2 {
+    transform: rotate(90deg);
+    transition: .3s;
+}
+.everything{
+	background-color: #F2C8B2;
+	padding: 80px;
+	border: double 5px ;
+
+  background: 
+    linear-gradient(
+      rgba(242, 200, 178, 0.6),
+      rgba(242, 200, 178, 0.7)
+    ),
+    url(/assets/paper-bg.jpg);
+}
+
+</style>
+<div class="col-md-2"></div>
+<div class="everything col-md-8">
+<h3>What happened in ... </h3>
+<h2><%= @location.name %>?</h2>
+<hr>
+	<% @events.each do |event| %>
+        <div class="collapse-group"><a class="expand" href="#">
+          <h4><%= event.year %> - <u><%= event.title %></u>
+          <img class="hand" src="/assets/pointingright.png" width="30"></a></h4>
+           <p class="collapse"> <%= event.content %> </p>
+        </div>
 	<% end %>
+
 </p>
+
+
+<hr><a href="#back"><u>Back to Map.</u></a>
+</div>
+<script type="text/javascript">
+$('.expand').on('click', function(e) {
+    e.preventDefault();
+	$(this).find('.hand').toggleClass('rotate2');
+
+    var $collapse = $(this).closest('.collapse-group').find('.collapse');
+    $collapse.collapse('toggle');
+});
+</script>
+
+</section>

@@ -29,7 +29,11 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  # uriel added below 2 lines
+  config.serve_static_files = true
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+  # uriel changed value to true
+  config.assets.compile = true
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -76,4 +80,19 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+# Below defaults for email for forgotten passwords
+  config.action_mailer.default_url_options = { :host => 'http://ithappenedhere.herokuapp.com' }
+
+  config.action_mailer.delivery_method = :smtp 
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "gmail.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+  }
 end

@@ -1,6 +1,17 @@
+<section id= "banner-paper"> 
+
+
+<style type="text/css">  img{
+  -webkit-filter: sepia(70%);
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+}</style>
+
+
 <% @users.each do |u| %>
 	<div class= "col-md-6">
-	Username: <%= u.username %></h1>
+	Username: <%= u.username %></h1><br>
 	Email: <%= u.email %><br>
 	<%= u.about %><br>
 	
@@ -10,3 +21,5 @@
 	</div>
 <% end %>
 
+</section>
+</section>

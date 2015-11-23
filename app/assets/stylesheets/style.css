@@ -1,16 +1,44 @@
 
-body{
+body, input{
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-size: 18px;
+	background-color: none;
+}
+
+h1{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
+	font-size: 50px;
+	padding-bottom: 20px;
 }
 
-p, input, textarea{
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	padding-bottom: 20px;
+
+}
+
+h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	padding-bottom: 16px;
+	color: #5b5b5b;
+
+}
+
+p{
 	font-family: 'Lora', serif;
+	color: white;
+
 }
 
-/****************
-SECTION
-*****************/
+em {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+
+}
+
+/*SECTION*/
 section{
 	background-color: #fff;
 	padding: 80px 0;
@@ -25,9 +53,6 @@ section header{
 	margin-bottom: 80px;
 }
 
-p{
-	color: #808080;
-}
 
 address{
 	margin-bottom: 50px;
@@ -41,13 +66,20 @@ address span{
 }
 
 a{
-	color: #fa694e;
+	color: white;
+	/*text-transform: uppercase;*/
 }
 
 a:hover,
 a:focus{
-	color: #FA4B2A;
+	color: #A9B262;
 }
+
+ 
+ .container {
+ 	padding-top: 0px;
+
+ }  
 
 .logo{
 	background: url('./logo.png');
@@ -56,6 +88,15 @@ a:focus{
 	top: 15px;
 	width: 385px;
     height: 90px;
+}
+
+
+.fa{ 
+	color: #5b5b5b;
+}
+
+.fa-close{
+	color: #5b5b5b;
 }
 
 .menu-toggle{
@@ -105,71 +146,101 @@ a:focus{
 .menu .nav > li > a:hover,
 .menu .nav > li > a:focus{
 	background: transparent;
-	color: #fa694e;
+	color: #A9B262;
 }
 
-.menu .social-icons{
-	margin-top: 50px;
-	width: 80%;
-	margin-right: auto;
-	margin-left: auto;
-}
+#banner {
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-image: url('home-bg.jpg');
+    background-position: 100%;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+    background-size: cover;
+    width: 100%;
+	height: 700px;
+    color: white;
+    cursor: default;
+    padding: 6em 0px;
+    text-align: center;
+   
+ }
 
-.menu .social-icons li{
-	margin-right: 10px;
-	float: none;
-	display: inline-block;
-}
+ #banner-login {
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-image: url('login-bg.jpg');
+    background-position: 100%;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+    background-size: cover;
+    width: 100%;
+	height: 700px;
+    color: white;
+    cursor: default;
+    padding: 6em 0px;
+    text-align: center;
+ }
+ 
+  #banner-signup {
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-image: url('signup-bg.jpg');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+	height: 700px;
+    color: white;
+    cursor: default;
+    padding: 6em 0px;
+    text-align: center;
+ }
 
-.menu .social-icons li:last-child{
-	margin-right: 0;
-}
+  #banner-paper {
+  	  background: 
+    linear-gradient(
+      rgba(255,250,237,0.8),
+      rgba(255,250,237,0.8)
+    ),
+    url(/assets/signup-bg.jpg);
+  	background-attachment: fixed;
+    /*background-attachment: scroll, scroll, scroll, fixed;*/
+    /*background-image: url('paper-bg.jpg');*/
+    background-position: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
+	height: 1000px;
+    /*color: white;*/
+    cursor: default;
+    padding: 6em 0px;
+    text-align: center;
+ }
 
-.menu .social-icons > li > a{
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
-}
+   #banner-password {
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-image: url('password-bg.jpg');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+	height: 700px;
+    color: white;
+    cursor: default;
+    padding: 6em 0px;
+    text-align: center;
+ }
 
-
-.jumbotron{
-	text-align: center;
-	position: relative;
-	background: url('./bg.jpg');
-	background-size: cover;
-	color: #fff;
-}
-
-.jumbotron .mask{
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 0;
-	width: 100%;
+    #banner-historical {
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-image: url('historical-bg.jpg');
+    background-position: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
 	height: 100%;
-	background: #333;
-	opacity: 0.5;
-}
+    color: white;
+    cursor: default;
+    padding: 6em 0px;
+    text-align: center;
+ }
 
-.jumbotron p{
-	color: #fff;
-}
-
-.jumbotron .container{
-	margin-top: 20%;
-}
-
-.jumbotron h1{
-	text-transform: uppercase;
-	margin-bottom: 30px;
-}
-
-.header-info{
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
 
 /***
 SERVICES
@@ -191,12 +262,12 @@ SERVICES
 .service-item .icon i{
 	line-height: 110px;
 	font-size: 45px;	
-	color: #fa694e;
+	color: #A9B262;
 }
 
 .service-item .icon:hover{
-	background-color: #fa694e;
-	border-color: #fa694e;
+	background-color: #A9B262;
+	border-color: #A9B262;
 }
 
 .service-item .icon:hover i{
@@ -262,7 +333,7 @@ PORTFOLIO
 	width: 50px;
 	height: 50px;
 	color: #fff;
-	background-color: #fa694e;
+	background-color: #A9B262;
 	text-align: center;
 	line-height: 50px;
 	font-size: 30px;
@@ -285,7 +356,7 @@ PORTFOLIO
 	width: 260px;
 	height: 110px;
 	background: #333;
-	color: #fa694e;
+	color: #A9B262;
 	border-radius: 5px;
 	font-size: 20px;
 	line-height: 110px;
@@ -313,26 +384,6 @@ PORTFOLIO
 	height: 300px;
 }
 
-.btn{
-	padding: 15px 30px;
-	border-radius: 0;
-	-webkit-transition: border-color 0.4s, color 0.4s;
-	transition: border-color 0.4s, color 0.4s;
-}
-
-.btn-primary{
-	background: #A9B262;
-	border-width: 2px;
-	color: #fff;
-	border-color: #A9B262;
-}
-
-.btn-primary:hover,
-.btn-primary:focus{
-	background: #fff;
-	color: rgb(250, 92, 78);
-	border-color: #A9B262;
-}
 
 
 /* FORMS*/
@@ -347,6 +398,7 @@ form{
 }
 .form-control{
 	padding: 17px 25px;
+	font-family: 'Lora', serif;
 	font-size: 15px;
 	height: auto;
 	border-radius: 0;
@@ -364,6 +416,7 @@ form{
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
+
 
 footer{
 	padding: 75px 0;
@@ -399,11 +452,128 @@ ul.social-icons > li > a{
 
 @media screen and (min-width: 768px){
 
-	.jumbotron h1, 
-	.jumbotron .h1 {
+	.home-page .h1 {
 		font-size: 50px;
 	}
 	.logo {
-		width: 300px;
+		width: 380px;
 	}
+}
+
+
+/* Button */
+
+.small-btn {
+	border-radius: 0;
+	background: #A9B262;
+	border-width: 3px;
+	border-color: #A9B262;
+
+}
+.btn{
+	padding: 15px 30px;
+	border-bottom-color: none;
+	margin-color: none;
+	border-radius: 0;
+	background: #A9B262;
+	border-width: 3px;
+	border-color: #A9B262;
+}
+
+.btn:hover,
+.btn:focus{
+	background: #fff;
+	color: #A9B262;
+	border-color: #A9B262;
+}
+
+/* Wobble Vertical */
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.hvr-wobble-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  color: none;
+  margin-color: none;
+  padding: 0px 0px;
+}
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  color: none;
+  margin-color: none;
+  padding: 0px 0px;
+
 }

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get '/about', to: 'pages#about'
-  get '/team' , to: 'pages#team'
   get '/community', to: 'pages#community'
   get '/home', to: 'pages#home'
 
@@ -8,8 +7,9 @@ Rails.application.routes.draw do
 devise_for :users, controllers: {
    sessions: 'users/sessions'
 }
+# resources :users, :only => [:show]
 
-root to: 'pages#home'
+root to: 'events#index'
 
 resources :events do
   resources :locations do
@@ -24,5 +24,6 @@ end
 post '/locations', to: 'locations#create'
 get '/locations', to: "locations#show"
 get '/locations/:id', to: "locations#showOne"
-
+ post '/users', to: 'users#create'
+get '/users', to: "users#show"
 end
