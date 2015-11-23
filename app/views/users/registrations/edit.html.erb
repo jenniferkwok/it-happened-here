@@ -24,7 +24,7 @@
                          </div>
 
                             <div class="form-group">
-                            <%= f.password_field :current_password, placeholder: "Current Password", class: "form-control" %> <p>(We need your current password to confirm your changes)</p><br />
+                            <%= f.password_field :current_password, placeholder: "Current Password", class: "form-control" %> <em>(We need your current password to confirm your changes)</em><br />
                            </div>
 
                       
@@ -33,7 +33,7 @@
                       </div>
                       <% end %>
 
-              <%= render "users/shared/links" %>
+              <%= render "users/shared/links" %> 
 
 
               <h3>Unhappy with your account?</h3>
