@@ -1,29 +1,33 @@
+<section id= "banner-location"> 
+<div class="container-location">
 
-<section id= "banner-paper"> 
-
-
-<style type="text/css">  img{
-  -webkit-filter: sepia(70%);
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 8px;
-}</style>
+	<header>
+	<h2>Locations</h2>
+	<p2>WHAT HAPPENED IN YOUR LOCATION.</p2>
+	</header>
 
 
-<% @locations.each do |l| %>
+			<% @locations.each do |l| %>
 
-	<section id="portfolio" class="darker">
-	<div class= "container">
-	<div class="well text-center">
-	<h1><%= l.name %></h1>
-		<%= l.address %><br>
-	Latitude: <%= l.lat %><br>
-	Longitude: <%= l.lng %><br>
-	<img src="/assets/<%= l.image %>" class="location-image" /img>
-	Location added: <%= l.created_at %>
-	</div>
-	</div>
+
+			<figure class="location-item col-md-4 col-sm-6" >
+
+			<img src="/assets/<%= l.image %>" > </img>
+
+			<figcaption class="mask">
+			<div class= "maskpadding">
+
+				<m1><%= l.name %></m1><br>
+				<m2><%= l.address %><br>
+				Latitude: <%= l.lat %><br>
+				Longitude: <%= l.lng %><br>
+				Location added: <%= l.created_at %></m2>
+			</div>	
+				</figcaption>
+			</figure>
 
 <% end %>
-</section>
+
+</div>
+
 </section>
