@@ -8,7 +8,7 @@ devise_for :users, controllers: {
    sessions: 'users/sessions'
 }
 
-root to: 'pages#home'
+root to: 'events#index'
 
 resources :events do
   resources :locations do
