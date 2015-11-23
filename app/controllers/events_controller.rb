@@ -22,8 +22,7 @@ class EventsController < ApplicationController
 		@location = event_params[:location_id]
 		@event = Event.new(event_params)
 		@event.save
-		print 'event created -- OOOOOOOO'
-		redirect_to event_id
+		redirect_to events_path
 		
 	end
 	def destroy
