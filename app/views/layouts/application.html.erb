@@ -36,8 +36,11 @@
 				<% end %>
 
 				<% if current_user %>
-				<li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
-				<% end %>
+				
+				<li><%= link_to "LOCATIONS", locations_path, method: :get%> </li>
+				
+				<li><%= link_to "USERS", users_path, method: :get%></li>
+				<li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %><% end %></li>
 			</ul>
 			</nav>
 			
