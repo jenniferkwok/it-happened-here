@@ -32,7 +32,7 @@ hr{    border: 0;
 <script type="text/javascript">
 $('.expand').on('click', function(e) {
     e.preventDefault();
-	$('.hand').toggleClass('rotate2');
+	$(this).find('.hand').toggleClass('rotate2');
 
     var $collapse = $(this).closest('.collapse-group').find('.collapse');
     $collapse.collapse('toggle');
