@@ -1,6 +1,7 @@
 
 <style type="text/css">
-    h3 {font-family: 'Playfair Display', serif;}
+    h3, a{font-family: 'Playfair Display', serif; color: black}
+}
 h2{font-family: 'Playfair Display SC', serif; font-weight: bold}
 hr{    border: 0;
     border-bottom: 5px double #8E1F1D;;}
@@ -10,9 +11,9 @@ hr{    border: 0;
 <h2><%= @location.name %>?</h2>
 <hr>
 	<% @events.each do |event| %>
-        <div class="span4 collapse-group">
+        <div class="span4 collapse-group"><a class="expand" href="#">
           <h4><%= event.year %> - <%= event.title %>
-          <a class="expand" href="#"><img id="hand" src="https://openclipart.org/image/2400px/svg_to_png/183195/pointing-hand.png" width="30"></a></h4>
+          <img id="hand" src="https://openclipart.org/image/2400px/svg_to_png/183195/pointing-hand.png" width="30"></a></h4>
            <p class="collapse"> <%= event.content %> </p>
         </div>
 	<% end %>
@@ -21,6 +22,9 @@ hr{    border: 0;
 <script type="text/javascript">
 $('.expand').on('click', function(e) {
     e.preventDefault();
+
+    // var $this = $(this);
+
 
 // $(".hand").css({
 //  transform: ' rotateZ(120deg)',
@@ -31,6 +35,7 @@ $('.expand').on('click', function(e) {
 
     var $collapse = $(this).closest('.collapse-group').find('.collapse');
     $collapse.collapse('toggle');
+
 
 });
 
