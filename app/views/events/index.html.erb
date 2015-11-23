@@ -48,14 +48,14 @@
 
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function (position) {
-				initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-				map.setCenter(initialLocation);
-				map.setZoom(16);
+				// initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				// map.setCenter(initialLocation);
+				map.setZoom(14);
 
 				var marker = new google.maps.Marker({
 					icon: {url :'/assets/youarehere150.png',
 					height:10},
-    	// icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFBB00',
+    	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFBB00',
     	position: initialLocation,
     	map: map
     });
