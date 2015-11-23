@@ -12,44 +12,36 @@
 				<div class="form-group">
 					<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
 				</div>
-
+				<h5>Choose a Date - required</h5>
 				<div class="form-group">
-					<%= f.number_field :year, placeholder: "Year", class: 'form-control'  %>
-				</div>
-
-				<div class="form-group">
-					<%= f.date_field :date, placeholder: "Date", :prompt => :month, class: 'form-control' %>
-				</div>
-
-				<div class="form-group">
+					<%= f.date_field :date, placeholder: "Choose a Date", :prompt => :month, class: 'form-control'%>
+				</div><hr>
+				 Pick a location<br>
+				<span class="form-group">
 					<%= f.collection_select(:location_id, Location.all, :id, :name) %> 
-				</div>
-
+				</span>
+					 &nbsp|&nbsp &nbsp OR &nbsp &nbsp|&nbsp
 				<!-- Button trigger modal to add location-->
-				<div class= "hvr-wobble-vertical">
-					<div class="hv"></div><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-					ADD LOCATION
+				<span class= "hvr-wobble-vertical">
+					<span class="hv"></span><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+					ADD  A NEW LOCATION
 				</button>
-			</div>
-
-		</form>
-	</div>
-
-
-	<div class= "container">
-
+			</span>
+		<hr>
+	
 		<div class="form-group">
-			<%= f.text_field :link, placeholder: "Link", class: 'form-control' %>
+			<%= f.text_field :link, placeholder: "Link URL (optional)", class: 'form-control' %>
 		</div>
 
 		<div class="form-group">
-			<%= f.text_field :image, placeholder: "Image URL", class: 'form-control' %>
+			<%= f.text_field :image, placeholder: "Image URL (optional)", class: 'form-control' %>
 		</div>
 
 		<div class="form-group">
 			<%= f.text_area :content, placeholder: "Tell us about this event", class: 'form-control' %>
 		</div>
-
+		<hr>
+		Tag your Event<br>
 		<div class="form-group">
 			
 			<%= f.check_box :tag_art  %> Art and Culture
@@ -60,7 +52,7 @@
 			<%= f.check_box :tag_nature  %> Nature
 			<%= f.check_box :tag_sports  %> Sports
 		</div>
-
+		<hr>
 		<div class= "hvr-wobble-vertical">
 			<%= f.submit "SUBMIT", class: "btn btn-primary" %>
 		</div>
@@ -93,11 +85,11 @@
 
 					<div>
 						Link to image:
-						<%= f.text_field :image, placeholder: "Image" , class: 'form-control'%>
+						<%= f.text_field :image, placeholder: "Image URL (optional)" , class: 'form-control'%>
 					</div>
 					<br>
 					<div class="hvr-wobble-vertical">
-						<%= f.submit "Submit" , class: 'btn btn-primary'%>
+						<%= f.submit "Submit" , class: 'btn btn-primary' %>
 					</div>
 					<% end %>
 				</div>
@@ -108,9 +100,7 @@
 						<button type="button" class="btn btn-primary " data-dismiss="modal">Close</button>
 					</div>
 
-					<div class="hvr-wobble-vertical">
-						<button type="button" class="btn btn-primary form-group">Add</button>
-					</div>
+					
 
 				</div>
 
