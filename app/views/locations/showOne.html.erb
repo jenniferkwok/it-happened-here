@@ -7,6 +7,10 @@
 h2{font-family: 'Playfair Display SC', serif; font-weight: bold}
 hr{    border: 0;
     border-bottom: 5px double #8E1F1D;;}
+.rotate2 {
+    transform: rotate(90deg);
+    transition: .5s;
+}
 </style>
 
 <h3>What happened in ... </h3>
@@ -14,8 +18,8 @@ hr{    border: 0;
 <hr>
 	<% @events.each do |event| %>
         <div class="span4 collapse-group"><a class="expand" href="#">
-          <h4><%= event.year %> - <%= event.title %>
-          <img id="hand" src="https://openclipart.org/image/2400px/svg_to_png/183195/pointing-hand.png" width="30"></a></h4>
+          <h4><%= event.year %> - <u><%= event.title %></u>
+          <img class="hand" src="https://openclipart.org/image/2400px/svg_to_png/183195/pointing-hand.png" width="30"></a></h4>
            <p class="collapse"> <%= event.content %> </p>
         </div>
 	<% end %>
@@ -23,30 +27,16 @@ hr{    border: 0;
 </p>
 
 
-<hr><a href="#map">Back to top</a>
+<hr><a href="#back">Back to Map</a>
 
 <script type="text/javascript">
 $('.expand').on('click', function(e) {
     e.preventDefault();
-
-    // var $this = $(this);
-
-
-// $(".hand").css({
-//  transform: ' rotateZ(120deg)',
-//  MozTransform: ' rotateZ(120deg)',
-//  WebkitTransform: ' rotateZ(120deg)',
-//  msTransform: ' rotateZ(120deg)'
-// });
+	$('.hand').toggleClass('rotate2');
 
     var $collapse = $(this).closest('.collapse-group').find('.collapse');
     $collapse.collapse('toggle');
-
-
 });
-
-
-
 </script>
 
 </section>
