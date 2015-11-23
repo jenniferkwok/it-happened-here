@@ -28,10 +28,8 @@
                            </div>
 
                       
-                     <div class="actions">
-                      <button class="hvr-wobble-vertical"><div class="btn btn-primary">
-                      <%= f.submit "UPDATE"%>
-                      </div></button>
+                    <div class= "hvr-wobble-vertical">
+                      <%= f.submit "UPDATE", class: "btn btn-primary" %>
                       </div>
                       <% end %>
 
@@ -39,9 +37,12 @@
 
 
               <h3>Unhappy with your account?</h3>
-      
-                  <%= button_to "CANCEL", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+              
           
+                  <%= button_to "CANCEL", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+              </div>
+            
+
               <%= link_to "Back", :back %>
           </form>
     </div>
