@@ -1,6 +1,6 @@
 
 body, input{
-	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Montserrat', sans-serif;*/
 	font-size: 18px;
 	background-color: none;
 }
@@ -67,7 +67,7 @@ address span{
 
 a{
 	color: white;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 a:hover,
@@ -193,14 +193,21 @@ a:focus{
  }
 
   #banner-paper {
-    background-attachment: scroll, scroll, scroll, fixed;
-    background-image: url('paper-bg.jpg');
+  	  background: 
+    linear-gradient(
+      rgba(255,250,237,0.8),
+      rgba(255,250,237,0.8)
+    ),
+    url(/assets/signup-bg.jpg);
+  	background-attachment: fixed;
+    /*background-attachment: scroll, scroll, scroll, fixed;*/
+    /*background-image: url('paper-bg.jpg');*/
     background-position: 100%;
     background-repeat: repeat;
     background-size: cover;
     width: 100%;
-	height: 100%;
-    color: white;
+	height: 1000px;
+    /*color: white;*/
     cursor: default;
     padding: 6em 0px;
     text-align: center;
