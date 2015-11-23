@@ -1,90 +1,39 @@
-<div>
-<div class="main">
-<h2>Sign up</h2>
+<section id= "banner-signup"> 
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
-
-<!-- Login -->
-  <section id="contact">
     <div class="container">
-      <header>
-        <h2>What's in your neighborhood?</h2>
-        <p>Click on each pin to find out more.
-        </p>
-      </header>
-      <div class="map-wrapper">
-        <div class="map-canvas" id="map-canvas">Loading map...</div>
-        <div class="marker">
-          <span>We Are Here</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
+
+        <h1>Sign Up</h1>
+        <p>SIGN UP TO CHECK OUT OUR MAP AND ADD YOUR OWN EVENTS.</p>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
           <form class="row">
-            <div class="form-group col-md-6">
-              <input name="name" type="text" placeholder="Your Name" class="form-control" />
-            </div>
-            <div class="form-group col-md-6">
-              <input name="mail" type="email" placeholder="Your Email" class="form-control" />
-            </div>
-            <div class="form-group col-md-12">
-              <input name="subject" type="text" placeholder="Type Message Here..." class="form-control" />
-            </div>
-            <div class="form-group col-md-12">
-              <textarea name="message" class="form-control" rows="10" placeholder="Message"></textarea>
-            </div>
-            <div class="form-group col-md-12">
-              <button class="btn btn-lg btn-primary">Send</button>
-            </div>
+                  <div class="form-group">
+                    <%= f.email_field :email, autofocus: true, autocomplete: "off", placeholder: "Your Email", class: "form-control" %>
+                  </div>
+
+                      <div class="form-group">
+                      <%= f.password_field :password, autocomplete: "off", placeholder: "Your Password", class: "form-control" %> <% if @minimum_password_length %>
+                          <em>(<%= @minimum_password_length %> characters minimum)</em>
+                           <% end %><br />
+                      </div>
+
+                          <div class="form-group">
+                          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", class: "form-control" %> 
+                      </div>
+
+                      <div class="actions">
+                      <button class="hvr-wobble-vertical"><div class="btn btn-primary">
+                      <%= f.submit "SIGN UP"%>
+                      </div></button>
+                      </div>
+                      <% end %>
+
+              <%= render "users/shared/links" %>
           </form>
-        </div>
-        <div class="col-md-3 col-md-offset-1">
-          <address>
-            <span>Our Address</span>
-            <p>
-              4896 Desert Broom Court<br>
-              Newark, NJ 07102<br>
-              United States
-            </p>
-          </address>
-          <address>
-            <span>Email</span>
-            <p>mail@mail.com</p>
-          </address>
-          <address>
-            <span>Phone</span>
-            <p>+00 123-456-78900</p>
-          </address>
-        </div>
-      </div>
     </div>
-  </section>
-  <!-- Map section end -->
+  
+</section>
+
 
 </div>
