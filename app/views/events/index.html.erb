@@ -12,10 +12,9 @@
 		border: double 5px black;
 	}
 </style>
-
 <section id= "banner-paper"> 
 	<!-- <div class="col-md-12 "> -->
-	<h1>It Happened Here</h1>
+	<img src="/assets/ihh-logo-red.png" height="200"><br><br><br>
 <div id="back"></div>
 		<h4> <span id="yourlocation"></span></h4>
 	
@@ -48,14 +47,14 @@
 
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function (position) {
-				// initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-				// map.setCenter(initialLocation);
-				map.setZoom(14);
+				initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				map.setCenter(initialLocation);
+				map.setZoom(16);
 
 				var marker = new google.maps.Marker({
 					icon: {url :'/assets/youarehere150.png',
 					height:10},
-    	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFBB00',
+    	// icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFBB00',
     	position: initialLocation,
     	map: map
     });
