@@ -1,21 +1,43 @@
+
+<section id= "banner-paper"> 
 <div class="container">
+
+<style type="text/css">
+#showEvents{
+	background-color: transparent;
+margin-top: 100px;
+margin-bottom: 200px;
+}
+  #map{
+  -webkit-filter: sepia(30%);
+  border: double 5px black;
+}
+</style>
+
+
   <div class="row text-center">
     <div class="col-md-12 ">
       <h1>It Happened Here</h1>
-      <h5> <span id="yourlocation"></span></h5>
+
+<div class="text-center">
+
+<h5> <span id="yourlocation"></span></h5>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
-      <div id="map" style='width: 800px; height: 400px;'></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div id="map" style=' height: 400px;'></div>
     </div>
+        <div class="col-md-1"></div>
+
   </div>
+
 <br>
 <%if current_user%>
 <button class="hvr-wobble-vertical"><a  href="/events/new">Add a Historical Event</a></button>
 <% end %>
 <div id = "showEvents"></div>
-
 <script src="http://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places"></script>
 
 <script type="text/javascript">
@@ -24,7 +46,7 @@ function initialize() {
      var map = new google.maps.Map(document.getElementById('map'), {
      zoom: 14,
       center: new google.maps.LatLng(37.790841, -122.42),
-      styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#f7ded9"},{"visibility":"on"}]}]
+      styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#555555"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#F2C8B2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#A9B262"},{"visibility":"on"}]}]
     });
 
      if (navigator.geolocation) {
@@ -67,47 +89,58 @@ function getLocationName(){
 
         loadData();
         //gon.watch renews data in gon variables!
-        gon.watch;
+        gon.watch();
 
 function loadData (){
  gon.locations.forEach(function(location){
     var locationLatLong = new google.maps.LatLng(location.lat, location.lng);
     var marker = new google.maps.Marker({
     	icon: {
-    		url: '/assets/point60.png'
+    		url: '/assets/pocketwatch50.png'
     	},
         position: locationLatLong,
         map: map
 
     });
 
+//brings to single location
+ //   google.maps.event.addListener(marker, 'click', function() {
+      // window.location.href = '/locations/' + location.id;
+
     google.maps.event.addListener(marker, 'click', function() {
       $('#showEvents').empty();
-      
-      gon.quickEvents.forEach(function(e){
-        if (e.location_id == location.id) {
-          $('#showEvents').slideDown( "slow", function() {
-          // Animation complete.
 
-          // When marker clicked, append event content to bottom of page and add class to div for location id
-          $('#showEvents').append('<p>' + gon.locations[e.location_id].name + '</p>' + '<p>' + e.content + '</p>').addClass('' + e.location_id + '');
+        	var url = '/locations/' + location.id;
+        $('#showEvents').load(url);  
 
-        });
-        } 
-      });
+    $('html, body').animate({
+        scrollTop: $("#showEvents").offset().top
+    }, 2000);
+
+      // gon.quickEvents.forEach(function(e){
+      //   if (e.location_id == location.id) {    
+      //   	var url = '/locations/' + location.id;
+      //   $('#showEvents').load(url);  
+      //   	// $('#showEvents').append('<p>' + e.title + '</p>' + '<p>' + e.content + '</p>' + '<hr><a href="#map">Go to top</a>').addClass('' + e.location_id + '');
+      //   } 
+      // });
     });
+
     });
 }
  }
 
  // Go to location page when event is clicked on
- $('#showEvents').on('click', function() {
-    window.location.href = '/locations/' + $(this).attr('class');
- });
+ // $('#showEvents').on('click', function() {
+ //    window.location = '/locations/' + $(this).attr('class');
+ // });
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
 
 </script>
 
 </div>
 </div>
+</section>
+

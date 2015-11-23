@@ -1,4 +1,7 @@
+
+
 <section id= "banner-signup"> 
+
 
     <div class="container">
 
@@ -22,10 +25,9 @@
                           <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", class: "form-control" %> 
                       </div>
 
-                      <div class="actions">
-                      <button class="hvr-wobble-vertical"><div class="btn btn-primary">
-                      <%= f.submit "SIGN UP"%>
-                      </div></button>
+                      
+                     <div class= "hvr-wobble-vertical">
+                      <%= f.submit "SIGN UP", class: "btn btn-primary" %>
                       </div>
                       <% end %>
 
