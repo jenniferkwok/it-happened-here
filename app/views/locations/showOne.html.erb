@@ -5,19 +5,34 @@
     h3, a{font-family: 'Playfair Display', serif; color: black}
 }
 h2{font-family: 'Playfair Display SC', serif; font-weight: bold}
-hr{    border: 0;
-    border-bottom: 5px double #8E1F1D;;}
+hr{    
+	border: 0;
+    border-bottom: 1px double #8E1F1D;;}
 .rotate2 {
     transform: rotate(90deg);
-    transition: .5s;
+    transition: .3s;
 }
-</style>
+.everything{
+	background-color: #F2C8B2;
+	padding: 80px;
+	border: double 5px ;
 
+  background: 
+    linear-gradient(
+      rgba(242, 200, 178, 0.7),
+      rgba(242, 200, 178, 0.7)
+    ),
+    url(/assets/paper-bg.jpg);
+}
+
+</style>
+<div class="col-md-2"></div>
+<div class="everything col-md-8">
 <h3>What happened in ... </h3>
 <h2><%= @location.name %>?</h2>
 <hr>
 	<% @events.each do |event| %>
-        <div class="span4 collapse-group"><a class="expand" href="#">
+        <div class="collapse-group"><a class="expand" href="#">
           <h4><%= event.year %> - <u><%= event.title %></u>
           <img class="hand" src="https://openclipart.org/image/2400px/svg_to_png/183195/pointing-hand.png" width="30"></a></h4>
            <p class="collapse"> <%= event.content %> </p>
@@ -27,8 +42,8 @@ hr{    border: 0;
 </p>
 
 
-<hr><a href="#back">Back to Map</a>
-
+<hr><a href="#back"><u>Back to Map.</u></a>
+</div>
 <script type="text/javascript">
 $('.expand').on('click', function(e) {
     e.preventDefault();
