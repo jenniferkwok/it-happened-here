@@ -16,14 +16,11 @@ hr{    border: 0;
            <p class="collapse"> <%= event.content %> </p>
         </div>
 	<% end %>
-
+<hr><a href="#map">Back to top</a>
 
 <script type="text/javascript">
 $('.expand').on('click', function(e) {
     e.preventDefault();
-
-    var $this = $(this);
-
 
 // $(".hand").css({
 //  transform: ' rotateZ(120deg)',
@@ -32,9 +29,8 @@ $('.expand').on('click', function(e) {
 //  msTransform: ' rotateZ(120deg)'
 // });
 
-    var $collapse = $this.closest('.collapse-group').find('.collapse');
+    var $collapse = $(this).closest('.collapse-group').find('.collapse');
     $collapse.collapse('toggle');
-
 
 });
 

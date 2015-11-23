@@ -2,6 +2,10 @@
 #showEvents{
 	background-color: transparent;
 margin-top: 100px;
+margin-bottom: 200px;
+}
+  #map{
+  -webkit-filter: sepia(40%);
 }
 </style>
 
@@ -34,7 +38,7 @@ function initialize() {
      var map = new google.maps.Map(document.getElementById('map'), {
      zoom: 14,
       center: new google.maps.LatLng(37.790841, -122.42),
-      styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#f7ded9"},{"visibility":"on"}]}]
+      styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#555555"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#F2C8B2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#A9B262"},{"visibility":"on"}]}]
     });
 
      if (navigator.geolocation) {
@@ -77,7 +81,7 @@ function getLocationName(){
 
         loadData();
         //gon.watch renews data in gon variables!
-        gon.watch;
+        gon.watch();
 
 function loadData (){
  gon.locations.forEach(function(location){
@@ -95,7 +99,6 @@ function loadData (){
  //   google.maps.event.addListener(marker, 'click', function() {
       // window.location.href = '/locations/' + location.id;
 
-
     google.maps.event.addListener(marker, 'click', function() {
       $('#showEvents').empty();
 
@@ -105,8 +108,6 @@ function loadData (){
     $('html, body').animate({
         scrollTop: $("#showEvents").offset().top
     }, 2000);
-
-
 
       // gon.quickEvents.forEach(function(e){
       //   if (e.location_id == location.id) {    
