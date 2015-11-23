@@ -30,7 +30,7 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   # uriel added below 2 lines
-  config.serve_static_assets = true
+  config.serve_static_files = true
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
   # uriel changed value to true
   config.assets.compile = true
@@ -81,8 +81,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-# NEED TO CORRECT THE HTTP WITH THE CORRECT HEROKU PAGE
-  # config.action_mailer.default_url_options = { :host => 'http://yoursite.herokuapp.com' }
+# Below defaults for email for forgotten passwords
+  config.action_mailer.default_url_options = { :host => 'http://ithappenedhere.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp 
 
