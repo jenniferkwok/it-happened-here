@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 devise_for :users, controllers: {
    sessions: 'users/sessions'
 }
+# resources :users, :only => [:show]
 
 root to: 'events#index'
 
@@ -23,5 +24,6 @@ end
 post '/locations', to: 'locations#create'
 get '/locations', to: "locations#show"
 get '/locations/:id', to: "locations#showOne"
-
+ post '/users', to: 'users#create'
+get '/users', to: "users#show"
 end

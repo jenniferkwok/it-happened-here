@@ -229,7 +229,7 @@ Location.create(
 	Location.create( 
 	name: 'Old US Mint',
 	address: '155 Hermann St, San Francisco, CA 94103',
-	image: 'oldusmint.jpg',
+	image: 'oldusmint.JPG',
 	place_id: 'ChIJfw7KU6KAhYARb4UBE7BbCyc',
 	lat: 37.7829,
 	lng: -122.4071

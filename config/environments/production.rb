@@ -81,8 +81,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-# NEED TO CORRECT THE HTTP WITH THE CORRECT HEROKU PAGE
-  # config.action_mailer.default_url_options = { :host => 'http://yoursite.herokuapp.com' }
+# Below defaults for email for forgotten passwords
+  config.action_mailer.default_url_options = { :host => 'http://ithappenedhere.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp 
 

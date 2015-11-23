@@ -473,7 +473,7 @@ ul.social-icons > li > a{
 .btn{
 	padding: 15px 30px;
 	border-bottom-color: none;
-	margin color: none;
+	margin-color: none;
 	border-radius: 0;
 	background: #A9B262;
 	border-width: 3px;
@@ -560,7 +560,7 @@ ul.social-icons > li > a{
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   color: none;
-  margin color: none;
+  margin-color: none;
   padding: 0px 0px;
 }
 .hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
@@ -573,7 +573,7 @@ ul.social-icons > li > a{
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   color: none;
-  margin color: none;
+  margin-color: none;
   padding: 0px 0px;
 
 }
