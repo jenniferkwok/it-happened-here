@@ -1,118 +1,121 @@
 
-<section id= "banner-paper"> 
-<div class="container">
-<div class="row">
-<div col-md-6 text-center>
+<section id= "banner-historical"> 
 
-<div class= "panel" id ="eventform">
+	<div class="container">
 
+		<h2>Add A Historical Event</h2>
 
-<h1>Add a Historical Event</h1>
-<hr>
-<%= form_for @event do |f| %>
-<form>
+		<%= form_for @event do |f| %>
+		<form>
 
-<div class="form-group">
-<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
-</div>
-<div class="form-group">
-<%= f.number_field :year, placeholder: "Year", class: 'form-control'  %>
-</div>
-<br>
-<div class="form-group">
-<%= f.date_field :date, placeholder: "Date", :prompt => :month, class: 'form-control' %>
-</div>
+			<form class="row">
+				<div class="form-group">
+					<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
+				</div>
 
+				<div class="form-group">
+					<%= f.number_field :year, placeholder: "Year", class: 'form-control'  %>
+				</div>
 
-<div class="form-group form-control">
-	<%= f.collection_select(:location_id, Location.all, :id, :name) %> 
-	<!-- Button trigger modal to add location-->
-	<div class="hv"></div><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-  		Add Location
-	</button>
+				<div class="form-group">
+					<%= f.date_field :date, placeholder: "Date", :prompt => :month, class: 'form-control' %>
+				</div>
+
+				<div class="form-group">
+					<%= f.collection_select(:location_id, Location.all, :id, :name) %> 
+				</div>
+
+				<!-- Button trigger modal to add location-->
+				<div class= "hvr-wobble-vertical">
+					<div class="hv"></div><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+					ADD LOCATION
+				</button>
+			</div>
+
+		</form>
 	</div>
-</div>
-<div>
-Link:
-<div class="form-group">
-<%= f.text_field :link, placeholder: "Link", class: 'form-control' %>
-</div>
-<div class="form-group">
-Image:
-<%= f.text_field :image, placeholder: "Image URL", class: 'form-control' %>
-</div>
-<div class="form-group">
-Details:<br>
-<%= f.text_area :content, placeholder: "Tell us about this event", class: 'form-control' %>
-</div>
-<div class="form-group">
-Tags:<br>
-<%= f.check_box :tag_art  %> Art and Culture
-<%= f.check_box :tag_people  %> People
-<%= f.check_box :tag_science  %> Science
-<%= f.check_box :tag_politics  %> Politics
-<%= f.check_box :tag_conflict  %> Conflict
-<%= f.check_box :tag_nature  %> Nature
-<%= f.check_box :tag_sports  %> Sports
-</div>
-<div class="form-group, hvr-wobble-vertical btn btn-primary">
-<%= f.submit "Submit" , class: 'form-control' %>
-</div>
-<% end %>
+
+
+	<div class= "container">
+
+		<div class="form-group">
+			<%= f.text_field :link, placeholder: "Link", class: 'form-control' %>
+		</div>
+
+		<div class="form-group">
+			<%= f.text_field :image, placeholder: "Image URL", class: 'form-control' %>
+		</div>
+
+		<div class="form-group">
+			<%= f.text_area :content, placeholder: "Tell us about this event", class: 'form-control' %>
+		</div>
+
+		<div class="form-group">
+			
+			<%= f.check_box :tag_art  %> Art and Culture
+			<%= f.check_box :tag_people  %> People
+			<%= f.check_box :tag_science  %> Science
+			<%= f.check_box :tag_politics  %> Politics
+			<%= f.check_box :tag_conflict  %> Conflict
+			<%= f.check_box :tag_nature  %> Nature
+			<%= f.check_box :tag_sports  %> Sports
+		</div>
+
+		<div class= "hvr-wobble-vertical">
+			<%= f.submit "SUBMIT", class: "btn btn-primary" %>
+		</div>
+		<% end %>
+
+
+
+	
 
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-        <div class="hvr-wobble-vertical"><h4 class="modal-title" id="myModalLabel">Add a Location</h4></div>
-      
-      <div class="modal-body">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+				<div class="modal-header">
+				<h3>Add A Historical Event</h3>
 
-      	<%= form_for @location, url: locations_path do |f| %>
-      	<div>
-		Title of location:
-		<%= f.text_field :name, placeholder: "Name" , class: 'form-control'%>
-		</div>
-		<div>
-		Address of location:
-		<%= f.text_field :address, placeholder: "Address", class: 'form-control' %>
-		</div>
-		<div>
-		Link to image:
-		<%= f.text_field :image, placeholder: "Image" , class: 'form-control'%>
-		</div>
-		<div class="hvr-wobble-vertical">
-		<%= f.submit "Submit" , class: 'btn btn-primary'%>
-		</div>
-		<% end %>
+				<div class="modal-body">
 
-      </div>
-      <div class="modal-footer">
-	        <div class="hvr-wobble-vertical">
-	        	<button type="button" class="btn btn-primary " data-dismiss="modal">Close</button>
-	        </div>
-	        <div class="hvr-wobble-vertical">
-	        	<button type="button" class="btn btn-primary form-group">Add</button>
-	        </div>
-      </div>
-		</form>
-      </div>
-      </div>
-    </div>
-  </div>
+					<%= form_for @location, url: locations_path do |f| %>
+					<div>
+						Title of location:
+						<%= f.text_field :name, placeholder: "Name" , class: 'form-control'%>
+					</div>
+
+					<div>
+						Address of location:
+						<%= f.text_field :address, placeholder: "Address", class: 'form-control' %>
+					</div>
+
+					<div>
+						Link to image:
+						<%= f.text_field :image, placeholder: "Image" , class: 'form-control'%>
+					</div>
+					<br>
+					<div class="hvr-wobble-vertical">
+						<%= f.submit "Submit" , class: 'btn btn-primary'%>
+					</div>
+					<% end %>
+				</div>
+
+				<div class="modal-footer">
+
+					<div class="hvr-wobble-vertical">
+						<button type="button" class="btn btn-primary " data-dismiss="modal">Close</button>
+					</div>
+
+					<div class="hvr-wobble-vertical">
+						<button type="button" class="btn btn-primary form-group">Add</button>
+					</div>
+
+				</div>
+
+		</div>
+	</div>
 </div>
 
-</div>
-</div>
-</div>
-
-</form>
-</div>
-</div>
-</div>
-</div>
 </section>
-
