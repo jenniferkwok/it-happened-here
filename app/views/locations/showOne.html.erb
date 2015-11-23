@@ -1,11 +1,47 @@
-<section id= "banner-paper"> 
-<h1>What happened in ... <%= @location.name %>?</h1>
-<p>
-	<% @events.each do |event| %>
-	<div>
-	<h5><%= event.year %> - <%= event.title %></h5>
-	</div>
 
+<section id= "banner-paper"> 
+
+<style type="text/css">
+    h3 {font-family: 'Playfair Display', serif;}
+h2{font-family: 'Playfair Display SC', serif; font-weight: bold}
+hr{    border: 0;
+    border-bottom: 5px double #8E1F1D;;}
+</style>
+
+<h3>What happened in ... </h3>
+<h2><%= @location.name %>?</h2>
+<hr>
+	<% @events.each do |event| %>
+        <div class="span4 collapse-group">
+          <h4><%= event.year %> - <%= event.title %>
+          <a class="expand" href="#"><img id="hand" src="https://openclipart.org/image/2400px/svg_to_png/183195/pointing-hand.png" width="30"></a></h4>
+           <p class="collapse"> <%= event.content %> </p>
+        </div>
 	<% end %>
+
 </p>
+
+
+<hr><a href="#map">Back to top</a>
+
+<script type="text/javascript">
+$('.expand').on('click', function(e) {
+    e.preventDefault();
+
+// $(".hand").css({
+//  transform: ' rotateZ(120deg)',
+//  MozTransform: ' rotateZ(120deg)',
+//  WebkitTransform: ' rotateZ(120deg)',
+//  msTransform: ' rotateZ(120deg)'
+// });
+
+    var $collapse = $(this).closest('.collapse-group').find('.collapse');
+    $collapse.collapse('toggle');
+
+});
+
+
+
+</script>
+
 </section>

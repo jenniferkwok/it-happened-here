@@ -1,4 +1,15 @@
+
 <section id= "banner-paper"> 
+
+
+<style type="text/css">  img{
+  -webkit-filter: sepia(70%);
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+}</style>
+
+
 
 <% @locations.each do |l| %>
 
@@ -13,6 +24,7 @@
 	Location added: <%= l.created_at %>
 	</div>
 	</div>
+
 <% end %>
 </section>
 </section>

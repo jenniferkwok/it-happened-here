@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+
+gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
@@ -46,6 +48,9 @@ gem 'geocoder'
 # Use Devise for Authentication 
 gem 'devise'
 
+# Using Figaro to config environmental variables 
+# gem 'figaro'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -57,5 +62,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
 
+end
+ruby "2.2.1"
+gem 'spring'
