@@ -1,15 +1,23 @@
+<style>
+	.fa{ 
+		color: white;
+	}
+	.fa-close{
+		color: #A9B262;
+	}
+</style>
 <section id= "banner-signup"> 
-<div class="well text-center">
-<h2>All Events</h2>
-<% @events.reverse.each do |post| %>
-<div>
-<h4><%= event.title %></h4><hr>
-<p><%= event.content %></p>
-</div>
-<br>
-<% end %>
-<hr><a href="#map">Go to top</a>
-</div>
+	<div class="well text-center">
+		<h2>All Events</h2>
+		<% @events.reverse.each do |post| %>
+		<div>
+			<h4><%= event.title %></h4><hr>
+			<p><%= event.content %></p>
+		</div>
+		<br>
+		<% end %>
+		<hr><a href="#map">Go to top</a>
+	</div>
 </section>
 
 
