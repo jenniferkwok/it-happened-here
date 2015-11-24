@@ -1,10 +1,12 @@
 <style>
 .fa{ 
+
   color: white;
 }
 
 .fa-close{
   color: #A9B262;
+
 }
 </style>
 <section id= "banner-historical"> 
@@ -14,67 +16,58 @@
 		<h2>Add A Historical Event</h2>
 
 		<%= form_for @event do |f| %>
-		<form>
-
-			<form class="row">
-				<div class="form-group">
-					<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
-				</div>
-
-				<div class="form-group">
-					<%= f.number_field :year, placeholder: "Year", class: 'form-control'  %>
-				</div>
-
-				<div class="form-group">
-					<%= f.date_field :date, placeholder: "Date", :prompt => :month, class: 'form-control' %>
-				</div>
-
-				<div class="form-group">
-					<%= f.collection_select(:location_id, Location.all, :id, :name) %> 
-				</div>
-
-				<!-- Button trigger modal to add location-->
-				<div class= "hvr-wobble-vertical">
-					<div class="hv"></div><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-					ADD LOCATION
-				</button>
+			<hr>
+			Pick a location
+			<br>
+			<span class="form-group">
+				<%= f.collection_select(:location_id, Location.all, :id, :name) %> 
+			</span>
+			&nbsp|&nbsp &nbsp OR &nbsp &nbsp|&nbsp
+			<!-- Button trigger modal to add location-->
+			<span class= "hvr-wobble-vertical">
+				
+				<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+				ADD  A NEW LOCATION</button>
+			</span>
+			<hr>
+			<div class="form-group">
+				<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
+			</div>
+			
+			<div class="form-group">
+				<%= f.date_field :date, placeholder: "Choose a Date", :prompt => :month, class: 'form-control'%>
+			</div>
+	
+			<div class="form-group">
+				<%= f.text_field :link, placeholder: "Link URL (optional)", class: 'form-control' %>
 			</div>
 
-		</form>
-	</div>
+			<div class="form-group">
+				<%= f.text_field :image, placeholder: "Image URL (optional)", class: 'form-control' %>
+			</div>
 
-
-	<div class= "container">
-
-		<div class="form-group">
-			<%= f.text_field :link, placeholder: "Link", class: 'form-control' %>
-		</div>
-
-		<div class="form-group">
-			<%= f.text_field :image, placeholder: "Image URL", class: 'form-control' %>
-		</div>
-
-		<div class="form-group">
-			<%= f.text_area :content, placeholder: "Tell us about this event", class: 'form-control' %>
-		</div>
-
-		<div class="form-group">
-			
-			<%= f.check_box :tag_art  %> Art and Culture
-			<%= f.check_box :tag_people  %> People
-			<%= f.check_box :tag_science  %> Science
-			<%= f.check_box :tag_politics  %> Politics
-			<%= f.check_box :tag_conflict  %> Conflict
-			<%= f.check_box :tag_nature  %> Nature
-			<%= f.check_box :tag_sports  %> Sports
-		</div>
-
-		<div class= "hvr-wobble-vertical">
-			<%= f.submit "SUBMIT", class: "btn btn-primary" %>
-		</div>
+			<div class="form-group">
+				<%= f.text_area :content, placeholder: "Tell us about this event", class: 'form-control' %>
+			</div>
+			<hr>
+			Tag your Event<br>
+			<div class="form-group">
+				
+				<%= f.check_box :tag_art  %> Art and Culture
+				<%= f.check_box :tag_people  %> People
+				<%= f.check_box :tag_science  %> Science
+				<%= f.check_box :tag_politics  %> Politics
+				<%= f.check_box :tag_conflict  %> Conflict
+				<%= f.check_box :tag_nature  %> Nature
+				<%= f.check_box :tag_sports  %> Sports
+			</div>
+			<hr>
+			<div class= "hvr-wobble-vertical">
+				<%= f.submit "SUBMIT", class: "btn btn-primary" %>
+			</div>
 		<% end %>
 
-
+	</div>
 
 	
 
@@ -83,8 +76,8 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-				<div class="modal-header">
-				<h3>Add A Historical Event</h3>
+			<div class="modal-header">
+				<h3>Add A New Location for an Event</h3>
 
 				<div class="modal-body">
 
@@ -101,11 +94,11 @@
 
 					<div>
 						Link to image:
-						<%= f.text_field :image, placeholder: "Image" , class: 'form-control'%>
+						<%= f.text_field :image, placeholder: "Image URL (optional)" , class: 'form-control'%>
 					</div>
 					<br>
 					<div class="hvr-wobble-vertical">
-						<%= f.submit "Submit" , class: 'btn btn-primary'%>
+						<%= f.submit "Submit" , class: 'btn btn-primary' %>
 					</div>
 					<% end %>
 				</div>
@@ -116,14 +109,13 @@
 						<button type="button" class="btn btn-primary " data-dismiss="modal">Close</button>
 					</div>
 
-					<div class="hvr-wobble-vertical">
-						<button type="button" class="btn btn-primary form-group">Add</button>
-					</div>
+					
 
 				</div>
 
 		</div>
 	</div>
+</div>
 </div>
 
 </section>
