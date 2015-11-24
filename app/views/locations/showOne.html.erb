@@ -33,7 +33,7 @@ hr{
 <hr>
 	<% @events.each do |event| %>
         <div class="collapse-group"><a class="expand" href="#">
-          <h4><%= event.year %> - <u><%= event.title %></u>
+          <h4><%= event.date.year %> - <u><%= event.title %></u>
           <img class="hand" src="/assets/pointingright.png" width="30"></a></h4>
            <p class="collapse"> <%= event.content %> </p>
         </div>

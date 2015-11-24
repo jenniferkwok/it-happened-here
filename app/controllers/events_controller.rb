@@ -17,11 +17,15 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		id = params[:id]
-		event_params = params.require(:event).permit(:title, :year, :date, :link, :image, :content, :tag_art, :tag_people, :tag_science, :tag_politics, :tag_conflict, :tag_nature, :tag_sports, :location_id)
+
+		event_params = params.require(:event).permit(:title, :date, :link, :image, :content, :tag_art, :tag_people, :tag_science, :tag_politics, :tag_conflict, :tag_nature, :tag_sports, :location_id)
 		@location = event_params[:location_id]
 		@event = Event.new(event_params)
-		@event.save
+		if @event.save
+			p @event
+		else
+			p @event.errors
+		end
 		redirect_to events_path
 		
 	end
