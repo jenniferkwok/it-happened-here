@@ -1,25 +1,52 @@
-<section id= "banner-paper"> 
+<section id= "banner-signup"> 
+
+    <div class="container">
+
+        <h1>Edit Profile <%= resource_name.to_s.humanize %></h1>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+          <form class="row">
+                  <div class="form-group">
+                    <%= f.email_field :email, autofocus: true, autocomplete: "off", placeholder: "Your Email", class: "form-control" %>   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                      <% end %>
+                  </div>
+
+                      <div class="form-group">
+                      <%= f.password_field :password, autocomplete: "off", placeholder: "Your Password", class: "form-control" %> <p>(Leave blank if you don't want to change your password.)</p><br />
+                          <% if @minimum_password_length %>
+                          <em>(<%= @minimum_password_length %> characters minimum)</em>
+                           <% end %><br />
+                      </div>
+
+                          <div class="form-group">
+                          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", class: "form-control" %> 
+                         </div>
+
+                            <div class="form-group">
+                            <%= f.password_field :current_password, placeholder: "Current Password", class: "form-control" %> <em>(We need your current password to confirm your changes)</em><br />
+                           </div>
+
+                      
+                    <div class= "hvr-wobble-vertical">
+                      <%= f.submit "UPDATE", class: "btn btn-primary" %>
+                      </div>
+                      <% end %>
+
+              <%= render "users/shared/links" %> 
 
 
-<style type="text/css">  img{
-  -webkit-filter: sepia(70%);
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 8px;
-}</style>
+              <h3>Unhappy with your account?</h3>
+              
+          
+                  <%= button_to "CANCEL", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+              </div>
+            
 
-
-<% @users.each do |u| %>
-	<div class= "col-md-6">
-	Username: <%= u.username %></h1><br>
-	Email: <%= u.email %><br>
-	<%= u.about %><br>
-	
-	<img src="/assets/<%= u.image %>" class="user-image" /img>
-	<br>
-	
-	</div>
-<% end %>
-
+              <%= link_to "Back", :back %>
+          </form>
+    </div>
+  
 </section>
-</section>
+
+

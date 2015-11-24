@@ -212,7 +212,17 @@ a:focus{
     padding: 6em 0px;
     text-align: center;
  }
-
+ #banner-edit {
+    
+    background: url('signup-bg.jpg') repeat fixed;
+    background-position: 100%;
+   
+    background-size: cover;
+    width: 100%;
+	height: 1200px;
+    
+    text-align: center;
+ }	
   #banner-paper {
   	  background: 
     linear-gradient(

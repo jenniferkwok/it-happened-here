@@ -1,0 +1,44 @@
+
+<section id= "banner-paper"> 
+
+<style type="text/css">
+    h3, a{font-family: 'Playfair Display', serif; color: black}
+}
+h2{font-family: 'Playfair Display SC', serif; font-weight: bold}
+hr{    
+	border: 0;
+    border-bottom: 1px double #8E1F1D;;}
+.rotate2 {
+    transform: rotate(90deg);
+    transition: .3s;
+}
+.everything{
+	background-color: #F2C8B2;
+	padding: 80px;
+	border: double 5px ;
+
+  background: 
+    linear-gradient(
+      rgba(242, 200, 178, 0.6),
+      rgba(242, 200, 178, 0.7)
+    ),
+    url(/assets/paper-bg.jpg);
+}
+
+</style>
+
+
+<% @users.each do |u| %>
+	<div class="collapse-group"><a class="expand" href="#">
+	Username: <%= u.username %></h1><br>
+	Email: <%= u.email %><br>
+	<%= u.about %><br>
+	
+	<img src="/assets/<%= u.image %>" class="user-image" /img>
+	<br>
+	
+	</div>
+<% end %>
+
+</section>
+</section>
