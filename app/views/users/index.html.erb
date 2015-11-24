@@ -1,30 +1,245 @@
-<section id= "banner-paper"> 
+
+<style> 
+	body, input{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 18px;
+		background-color: none;
+	}
+	h2{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		padding-bottom: 20px;
+		position: center;
+	}
+	p2{
+		font-family: 'Lora', serif;
+		color: #5b5b5b;
+	}
+	em {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 13px;
+	}
+	/*SECTION*/
+	section{
+		background-color: #fff;
+		padding: 80px 0;
+	}
+	section.darker{
+		background-color: #fbfbfb;
+	}
+	section header{
+		text-align: center;
+		margin-bottom: 80px;
+	}
+	address{
+		margin-bottom: 50px;
+	}
+	address span{
+		margin-top:0;
+		margin-bottom: 25px;
+		font-size: 20px;
+		display: block;
+	}
+	a{
+		color: white;
+		text-transform: uppercase;
+	}
+	a:hover,
+	a:focus{
+		color: #A9B262;
+	}
+	.container {
+		padding-top: 0px;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}  
+	.container-location {
+		width: 1170px;
+		padding-top: 0px;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.row {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	.logo{
+		background: url('./logo.png');
+		position: absolute;
+		left: 15px;
+		top: 15px;
+		width: 385px;
+		height: 90px;
+	}
+	.fa{ 
+		color: white;
+	}
+	.fa-close{
+		color: #A9B262;
+	}
+	.menu-toggle{
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		font-size: 30px;
+		color: #fff;
+	}
+	.menu{
+		width: 300px;
+		display: block;
+		background: #333;
+		height: 100%;
+		top: 0;
+		right: -300px;
+		position: fixed;
+		z-index: 100;
+		text-align: center;
+		transition: right 0.4s;
+	}
+	.menu.nav-expanded{
+		right: 0;
+	}
+	.menu .close{
+		color: #fff;
+		margin-right: 10px;
+		margin-top:10px;
+	}
+	.menu h3{
+		margin-top:50px;
+		text-transform: uppercase;
+	}
+	.menu .nav{
+		padding: 0;
+	}
+	.menu .nav > li > a{
+		color: #fff;
+	}
+	.menu .nav > li > a:hover,
+	.menu .nav > li > a:focus{
+		background: transparent;
+		color: #A9B262;
+	}
+	/* Backgrounds */
+	#banner {
+		background-attachment: scroll, scroll, scroll, fixed;
+		background-image: url('home-bg.jpg');
+		background-position: 100%;
+		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 700px;
+		color: white;
+		cursor: default;
+		text-align: center;
+	}
+	#banner-location {
+		background: url('location-bg.jpg') no-repeat center fixed;
+		background-position: 100%;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+
+	}
+	/* Images */
+	img{
+		-webkit-filter: sepia(70%);
+		top:0;
+		left: 15px;
+		right: 15px;
+
+		vertical-align: middle;
+	}
+	/* Location */
+	.location-item{
+		position: relative;
+		margin-bottom: 30px;
+	}
+	.location-item .mask{
+		position: absolute;
+		top:0;
+		height: 257px;
+		width: 360px;
+		transition: all 0.4s;
+		background: rgba(0,0,0, 0.5);
+		opacity: 0;
+	}
+	.location-item .figcaption.mask i{
+		position: absolute;
+		height: 257px;
+		width: 360px;
+		color: #fff;
+		background-color: #A9B262;
+	}
+	.location-item:hover .mask{
+		opacity: 1;
+	}
+
+	.well {
+		position: absolute;
+		height: 257px;
+		width: 360px;
+		color: #fff;
+		background-color: #5b5b5b;
+
+	}
+	.maskpadding {
+		height: 257px;
+		width: 360px;
+		padding: 40px;
+	}
+	m1 {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 22px;
+		color: #fff;
+		position: center;
+	}
+	m2 {
+		font-family: 'Lora', serif;
+		font-size: 16px;
+		color: #fff;
+		position: center;
+
+	}
+	#banner-location {
+		background:url(/assets/location-bg.jpg) fixed repeat;
+		background-position: 100%;
+		background-size: cover;
+		width: 100%;
+		height: 3000px;
+
+	}
+</style>
+
+<section id= "banner-location"> 
+	<header>
+		<h2>Users</h2>
+		<p2>OTHER USERS NEAR YOU.</p2>
+	</header>
+	<div class="container-location">
+
+		<% @users.each do |u| %>
+
+		<figure class="location-item col-md-4 col-sm-6" >
 
 
-<style type="text/css">  img{
-  -webkit-filter: sepia(70%);
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 8px;
-}</style>
 
+			<div class="well text-center">
+			
+				<m1>Username: <%= u.username %><br></m1>
+				<m2>Email: <%= u.email %><br>
+					<%= u.about %><br></m2>
+			<img src="/assets/<%= u.image %>" class="user-image"> </img>
 
-<% @users.each do |u| %>
+				</div>
 
+				<figure>
 
-	<section id="portfolio" class="darker">
-	<div class= "container">
-	<div class="well text-center">
-	Username: <%= u.username %><br>
-	Email: <%= u.email %><br>
-	<%= u.about %><br>
-	
-	<img src="/assets/<%= u.image %>" class="user-image" /img>
-	<br>
-	
-	</div>
-	</div>
-<% end %>
+					<% end %>
 
-</section>
-</section>
+				</div>
+
+			</section>

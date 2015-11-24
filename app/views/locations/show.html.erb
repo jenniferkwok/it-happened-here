@@ -1,6 +1,4 @@
 
-<section id= "banner-location"> 
-
 <style> 
 body, input{
 	font-family: 'Montserrat', sans-serif;
@@ -217,13 +215,13 @@ m2 {
  }
 </style>
 
-
-<div class="container-location">
-
+<section id= "banner-location"> 
 	<header>
 	<h2>Locations</h2>
 	<p2>WHAT HAPPENED IN YOUR LOCATION.</p2>
 	</header>
+<div class="container-location">
+
 
 
 			<% @locations.each do |l| %>
@@ -235,6 +233,7 @@ m2 {
 
 			<figcaption class="mask">
 			<div class= "maskpadding">
+			<div class= "text-center">
 
 				<m1><%= l.name %></m1><br>
 				<m2><%= l.address %><br>
