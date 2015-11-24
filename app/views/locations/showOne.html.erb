@@ -60,12 +60,12 @@ hr{
           <% end %> <br>
           created at <%= event.created_at.strftime('%c') %><br>
           last updated <%= event.updated_at.strftime('%c') %><br> 
-          
-          <button class="">"edit this event"</button>
-            </div>
-            </p>
+           <div class="hvr-wobble-vertical"><%= button_to "EDIT THIS EVENT", "/events/<%= event.id %>/edit" , method: :get, class: "btn button-primary" %></div>
+         
 	<% end %>
 
+            </div>
+            </p>
 </p>
 
 
