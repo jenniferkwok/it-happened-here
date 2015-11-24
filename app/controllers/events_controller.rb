@@ -26,7 +26,7 @@ class EventsController < ApplicationController
 		else
 			p @event.errors
 		end
-		redirect_to events_path
+		redirect_to '/locations/location_id'
 		
 	end
 	def destroy
