@@ -24,7 +24,7 @@ end
 post '/locations', to: 'locations#create'
 get '/locations', to: "locations#show"
 get '/locations/:id', to: "locations#showOne"
- post '/users', to: 'users#create'
-get 'users/:id', to: "users#show"
+#  post '/users', to: 'users#create'
+# get 'users/:id', to: "users#show"
 end
 

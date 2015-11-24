@@ -1,0 +1,30 @@
+<section id= "banner-password"> 
+  	<div class = "container">
+		<div class="row">
+			<div class="black">
+				<%= form_for(@event, url: event_path, action: :update) do |f| %>
+
+					Title <br>
+					<%= f.text_field :title %><br>
+					Edit your post here<br>
+					<%= f.text_area :content %><br>
+					<%= f.date_field :date %><br>
+					Tags:
+					ART<%= f.check_box :tag_art %>
+					SCIENCE<%= f.check_box :tag_science %>
+					PEOPLE<%= f.check_box :tag_people %>
+					POLITICS<%= f.check_box :tag_politics %>
+					CONFLICT<%= f.check_box :tag_conflict %>
+					NATURE<%= f.check_box :tag_nature %>
+					SPORTS<%= f.check_box :tag_sports %>
+					<br><br>
+					<div class="hvr-wobble-vertical"><%= f.submit "Update Event", class: "btn button-primary"%></div><br>
+					
+				<% end %>
+
+			</div>
+		</div>
+	</div>
+</section>
+							
+	
