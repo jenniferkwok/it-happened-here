@@ -30,13 +30,40 @@ hr{
 <div class="everything col-md-8">
 <h3>What happened in ... </h3>
 <h2><%= @location.name %>?</h2>
+
 <hr>
 	<% @events.each do |event| %>
         <div class="collapse-group"><a class="expand" href="#">
-          <h4><%= event.year %> - <u><%= event.title %></u>
+          <h4><%= event.date.year %> - <u><%= event.title %></u>
+
           <img class="hand" src="/assets/pointingright.png" width="30"></a></h4>
-           <p class="collapse"> <%= event.content %> </p>
-        </div>
+           <p class="collapse"> <%= event.content %> 
+           <br>
+           Tags:
+          <% if event.tag_art == true%>
+          &nbspART
+          <% end %> 
+          <% if event.tag_people == true%>
+          &nbspPEOPLE
+          <% end %> 
+          <% if event.tag_science == true%>
+          &nbspSCIENCE
+          <% end %> 
+          <% if event.tag_politics == true%>
+          &nbspPOLITICS
+          <% end %> 
+          <% if event.tag_conflict == true%>
+          &nbspCONFLICT
+          <% end %> 
+          <% if event.tag_nature == true%>
+          &nbspNATURE
+          <% end %> <br>
+          created at <%= event.created_at.strftime('%c') %><br>
+          last updated <%= event.updated_at.strftime('%c') %><br> 
+          
+          <button class="">"edit this event"</button>
+            </div>
+            </p>
 	<% end %>
 
 </p>
