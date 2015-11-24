@@ -28,4 +28,3 @@ get '/locations/:id', to: "locations#showOne"
 get 'users/:id', to: "users#show"
 end
 
-get 'edit users', to: 'users#registration'
