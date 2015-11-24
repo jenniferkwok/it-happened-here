@@ -74,8 +74,15 @@ a:hover,
 a:focus{
 	color: #A9B262;
 }
+.black{
+	font-size: 1.5em;
+}
 
- 
+.black input,
+.black #event_content{
+	color:black;
+
+} 
 .container {
 	padding-top: 0px;
 	padding-right: 15px;

@@ -60,12 +60,15 @@ hr{
           <% end %> <br>
           created at <%= event.created_at.strftime('%c') %><br>
           last updated <%= event.updated_at.strftime('%c') %><br> 
-          
+
+
+          <% if current_user %>
+          <%= link_to "EDIT THIS EVENT", edit_event_path(event) , method: :get, class: "btn button-primary" %>
+          <% end %>
+      
 
             </div>
             </p>
-	<% end %>
-
 </p>
 
 

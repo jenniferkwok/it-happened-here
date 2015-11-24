@@ -1,33 +1,46 @@
-<div class="container">
-	<div class="row">
-		<div>
-			<h2><%= @event.title%></h2>
-			<%= @event.date%><br>
-			<%= @event.year%><br>
-			<%= @event.content%><br>
-			Tags:
-			<% if @event.tag_art == true%><br>
-			ART
-			<% end %> 
-			<% if @event.tag_people == true%><br>
-			PEOPLE
-			<% end %> 
-			<% if @event.tag_science == true%><br>
-			SCIENCE
-			<% end %> 
-			<% if @event.tag_politics == true%><br>
-			POLITICS
-			<% end %> 
-			<% if @event.tag_conflict == true%><br>
-			CONFLICT
-			<% end %> 
-			<% if @event.tag_nature == true%><br>
-			NATURE
-			<% end %> <br>
-			created at <%= @event.created_at%><br>
-			last updated<%= @event.updated_at%><br>	
-			Location: <%=  @location.name %><br>
-			<button class="">"edit this event"</button>
+<style>
+.fa{ 
+	color: white;
+}
+
+.fa-close{
+	color: #5b5b5b;
+}
+</style>
+<section id= "banner-signup"> 
+	<div class="container">
+		<div class="row">
+			<div>
+				<h2><%= @event.title%></h2>
+				<%= @event.date %><br>
+				<%= @event.content%><br>
+				Tags:
+				<% if @event.tag_art == true%>
+				&nbspART
+				<% end %> 
+				<% if @event.tag_people == true%>
+				&nbspPEOPLE
+				<% end %> 
+				<% if @event.tag_science == true%>
+				&nbspSCIENCE
+				<% end %> 
+				<% if @event.tag_politics == true%>
+				&nbspPOLITICS
+				<% end %> 
+				<% if @event.tag_conflict == true%>
+				&nbspCONFLICT
+				<% end %> 
+				<% if @event.tag_nature == true%>
+				&nbspNATURE
+				<% end %> <br>
+				created at: <%= @event.created_at.strftime('%c')%><br>
+				last updated: <%= @event.updated_at.strftime('%c')%><br>	
+				<br>
+				<div class="hvr-wobble-vertical"><%= button_to "EDIT THIS EVENT", "/events/#{@event.id}/edit" , method: :get, class: "btn button-primary" %></div>
+				
+				<div class="hvr-wobble-vertical"><%= button_to "BACK TO MAP", "/events/" , method: :get, class: "btn button-primary" %></div>
+
+			</div>
 		</div>
 	</div>
-</div>
+</section>
