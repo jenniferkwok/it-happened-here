@@ -15,6 +15,7 @@ h2{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 30px;
 	padding-bottom: 20px;
+	position: center;
 
 }
 
@@ -29,13 +30,25 @@ h3{
 p{
 	font-family: 'Lora', serif;
 	color: white;
+}
 
+p2{
+	font-family: 'Lora', serif;
+	color: #5b5b5b;
 }
 
 em {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 13px;
 
+}
+
+
+.well {
+	background-color: #3c3b58;
+	color: white;
+	border-radius: 8px; 
+	margin: 10px;
 }
 
 /*SECTION*/
@@ -67,7 +80,7 @@ address span{
 
 a{
 	color: white;
-	/*text-transform: uppercase;*/
+	text-transform: uppercase;
 }
 
 a:hover,
@@ -84,15 +97,7 @@ a:focus{
 	margin-left: auto;
 }  
 
-.container-location {
-	width: 1170px;
-	padding-top: 0px;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
 
-}
 
 .row {
 	margin-right: -15px;
@@ -108,16 +113,16 @@ a:focus{
 	left: 15px;
 	top: 15px;
 	width: 385px;
-    height: 90px;
+	height: 90px;
 }
 
 
 .fa{ 
-	color: #5b5b5b;
+	color: white;
 }
 
 .fa-close{
-	color: #5b5b5b;
+	color: #A9B262;
 }
 
 .menu-toggle{
@@ -170,199 +175,168 @@ a:focus{
 	color: #A9B262;
 }
 
+
+/* Backgrounds */
+
 #banner {
-    background-attachment: scroll, scroll, scroll, fixed;
-    background-image: url('home-bg.jpg');
-    background-position: 100%;
-    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-    background-size: cover;
-    width: 100%;
+	background-attachment: scroll, scroll, scroll, fixed;
+	background-image: url('home-bg.jpg');
+	background-position: 100%;
+	background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+	background-size: cover;
+	width: 100%;
 	height: 700px;
-    color: white;
-    cursor: default;
-    padding: 6em 0px;
-    text-align: center;
-   
- }
+	color: white;
+	cursor: default;
+	text-align: center;
 
- #banner-login {
-    background-attachment: scroll, scroll, scroll, fixed;
-    background-image: url('login-bg.jpg');
-    background-position: 100%;
-    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-    background-size: cover;
-    width: 100%;
+}
+
+#banner-login {
+	background-attachment: scroll, scroll, scroll, fixed;
+	background-image: url('login-bg.jpg');
+	background-position: 100%;
+	background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+	background-size: cover;
+	width: 100%;
 	height: 700px;
-    color: white;
-    cursor: default;
-    padding: 6em 0px;
-    text-align: center;
- }
- 
-  #banner-signup {
-    background-attachment: scroll, scroll, scroll, fixed;
-    background-image: url('signup-bg.jpg');
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-	height: 700px;
-    color: white;
-    cursor: default;
-    padding: 6em 0px;
-    text-align: center;
- }
-
-  #banner-paper {
-  	  background: 
-    linear-gradient(
-      rgba(255,250,237,0.8),
-      rgba(255,250,237,0.8)
-    ),
-    url(/assets/signup-bg.jpg);
-  	background-attachment: fixed;
-    /*background-attachment: scroll, scroll, scroll, fixed;*/
-    /*background-image: url('paper-bg.jpg');*/
-    background-position: 100%;
-    background-repeat: repeat;
-    background-size: cover;
-    width: 100%;
-	height: 1000px;
-    /*color: white;*/
-    cursor: default;
-    padding: 6em 0px;
-    text-align: center;
- }
-
-   #banner-password {
-    background-attachment: scroll, scroll, scroll, fixed;
-    background-image: url('password-bg.jpg');
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-	height: 700px;
-    color: white;
-    cursor: default;
-    padding: 6em 0px;
-    text-align: center;
- }
-
-    #banner-historical {
-    background-attachment: scroll, scroll, scroll, fixed;
-    background-image: url('historical-bg.jpg');
-    background-position: 100%;
-    background-repeat: repeat;
-    background-size: cover;
-    width: 100%;
-	height: 100%;
-    color: white;
-    cursor: default;
-    padding: 6em 0px;
-    text-align: center;
- }
-
-
-/***
-SERVICES
-****/
-.service-item{
+	color: white;
+	cursor: default;
 	text-align: center;
 }
 
-.service-item .icon{
-	border: 1px #b3b3b3 solid;
-	margin: 0 auto;
-	border-radius: 100%;
-	width: 110px;
-	height: 110px;
-	display: block;
-	margin-bottom: 60px;
+#banner-signup {
+	background-attachment: scroll, scroll, scroll, fixed;
+	background-image: url('signup-bg.jpg');
+	background-position: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+	color: white;
+	cursor: default;
+	text-align: center;
 }
 
-.service-item .icon i{
-	line-height: 110px;
-	font-size: 45px;	
-	color: #A9B262;
+#banner-paper {
+	background-attachment: scroll, scroll, scroll, fixed;
+	background-image: url('paper-bg.jpg');
+	background-position: 100%;
+	background-repeat: repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	color: white;
+	cursor: default;
+	text-align: center;
 }
 
-.service-item .icon:hover{
-	background-color: #A9B262;
-	border-color: #A9B262;
+#banner-password {
+	background-attachment: scroll, scroll, scroll, fixed;
+	background-image: url('password-bg.jpg');
+	background-position: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+	color: white;
+	cursor: default;
+	text-align: center;
 }
 
-.service-item .icon:hover i{
-	color: #fff;
-}
-.service-item h3{
-	margin-bottom: 60px;
-}
-
-.service-item .icon .icon-pen{
-	background: url('img/icon/pen.png');
-}
-
-/****
-PORTFOLIO
-*****/
-.project{
-	border: 1px solid #808080;
-	margin-bottom: 70px;
+#banner-historical {
+	background-attachment: scroll, scroll, scroll, fixed;
+	background-image: url('historical-bg.jpg');
+	background-position: 100%;
+	background-repeat: repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	color: white;
+	cursor: default;
+	padding: 6em 0px;
+	text-align: center;
 }
 
-.project .project-info h3{
-	margin-top: 50px;
+#banner-location {
+	background: url('location-bg.jpg') no-repeat center fixed;
+	background-position: 100%;
+	background-repeat: repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	text-align: center;
+
 }
 
-.project .project-info p{
-	padding-right: 30px;
-	margin:30px 0;
+/* Images */
+img{
+	-webkit-filter: sepia(70%);
+	top:0;
+	left: 15px;
+	right: 15px;
+	height: 257px;
+	width: 360px;
+	vertical-align: middle;
 }
 
-.project .project-info .close{
-	position: absolute;
-	right: 20px;
-	top:10px;
-	width: 20px;
-	height: 20px;
-	font-size: 20px;
-	color: #808080
-}
 
-.portfolio-item{
+/* Location */
+
+
+.location-item{
 	position: relative;
 	margin-bottom: 30px;
 }
 
-.portfolio-item .mask{
+.location-item .mask{
 	position: absolute;
 	top:0;
-	left: 15px;
-	right: 15px;
-	height: 100%;
+	height: 257px;
+	width: 360px;
 	transition: all 0.4s;
 	background: rgba(0,0,0, 0.5);
 	opacity: 0;
 }
 
-.portfolio-item .mask i{
+.location-item .figcaption.mask i{
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top:-25px;
-	margin-left: -25px;
-	width: 50px;
-	height: 50px;
+	height: 257px;
+	width: 360px;
 	color: #fff;
 	background-color: #A9B262;
-	text-align: center;
-	line-height: 50px;
-	font-size: 30px;
 }
 
-.portfolio-item:hover .mask{
+.location-item:hover .mask{
 	opacity: 1;
 }
+
+
+.maskpadding {
+	height: 257px;
+	width: 360px;
+	padding: 40px;
+
+}
+
+m1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	color: #fff;
+	position: center;
+}
+m2 {
+	font-family: 'Lora', serif;
+	font-size: 16px;
+	color: #fff;
+	position: center;
+    
+}
+
+
+
+/* Map */
 
 .map-wrapper{
 	position: relative;
@@ -406,8 +380,8 @@ PORTFOLIO
 }
 
 
-
 /* FORMS*/
+
 form{
 	margin-bottom: 70px;
 
@@ -438,6 +412,47 @@ form{
 	box-shadow: none;
 }
 
+/* Media Sizing */
+
+@media screen and (min-width: 768px){
+
+	.home-page .h1 {
+		font-size: 50px;
+	}
+	.logo {
+		width: 380px;
+	}
+}
+
+
+/* Button */
+
+.small-btn {
+	border-radius: 0;
+	background: #A9B262;
+	border-width: 3px;
+	border-color: #A9B262;
+
+}
+.btn{
+	padding: 15px 30px;
+	border-bottom-color: none;
+	margin color: none;
+	border-radius: 0;
+	background: #A9B262;
+	border-width: 3px;
+	border-color: #A9B262;
+}
+
+.btn:hover,
+.btn:focus{
+	background: #fff;
+	color: #A9B262;
+	border-color: #A9B262;
+}
+
+
+/* Footer */
 
 footer{
 	padding: 75px 0;
@@ -471,130 +486,93 @@ ul.social-icons > li > a{
 }
 
 
-@media screen and (min-width: 768px){
-
-	.home-page .h1 {
-		font-size: 50px;
-	}
-	.logo {
-		width: 380px;
-	}
-}
-
-
-/* Button */
-
-.small-btn {
-	border-radius: 0;
-	background: #A9B262;
-	border-width: 3px;
-	border-color: #A9B262;
-
-}
-.btn{
-	padding: 15px 30px;
-	border-bottom-color: none;
-	margin-color: none;
-	border-radius: 0;
-	background: #A9B262;
-	border-width: 3px;
-	border-color: #A9B262;
-}
-
-.btn:hover,
-.btn:focus{
-	background: #fff;
-	color: #A9B262;
-	border-color: #A9B262;
-}
-
 /* Wobble Vertical */
 @-webkit-keyframes hvr-wobble-vertical {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
+	16.65% {
+		-webkit-transform: translateY(8px);
+		transform: translateY(8px);
+	}
 
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
+	33.3% {
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
+	}
 
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
+	49.95% {
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px);
+	}
 
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
+	66.6% {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+	}
 
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
-  }
+	83.25% {
+		-webkit-transform: translateY(1px);
+		transform: translateY(1px);
+	}
 
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
 }
 
 @keyframes hvr-wobble-vertical {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
+	16.65% {
+		-webkit-transform: translateY(8px);
+		transform: translateY(8px);
+	}
 
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
+	33.3% {
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
+	}
 
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
+	49.95% {
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px);
+	}
 
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
+	66.6% {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+	}
 
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
-  }
+	83.25% {
+		-webkit-transform: translateY(1px);
+		transform: translateY(1px);
+	}
 
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
 }
 
 .hvr-wobble-vertical {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  color: none;
-  margin-color: none;
-  padding: 0px 0px;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	color: none;
+	margin color: none;
+	padding: 0px 0px;
 }
 .hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
-  -webkit-animation-name: hvr-wobble-vertical;
-  animation-name: hvr-wobble-vertical;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  color: none;
-  margin-color: none;
-  padding: 0px 0px;
+	-webkit-animation-name: hvr-wobble-vertical;
+	animation-name: hvr-wobble-vertical;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	color: none;
+	margin color: none;
+	padding: 0px 0px;
 
 }
