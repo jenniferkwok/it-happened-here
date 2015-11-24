@@ -1,4 +1,276 @@
 <section id= "banner-location"> 
+
+
+
+<style> 
+
+body, input{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	background-color: none;
+}
+
+
+h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 50px;
+	padding-bottom: 20px;
+}
+
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	padding-bottom: 20px;
+	position: center;
+
+}
+
+h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	padding-bottom: 16px;
+	color: #5b5b5b;
+
+}
+
+p{
+	font-family: 'Lora', serif;
+	color: white;
+}
+
+p2{
+	font-family: 'Lora', serif;
+	color: #5b5b5b;
+}
+
+em {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+
+}
+
+/*SECTION*/
+section{
+	background-color: #fff;
+	padding: 80px 0;
+}
+
+section.darker{
+	background-color: #fbfbfb;
+}
+
+section header{
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+
+address{
+	margin-bottom: 50px;
+}
+
+address span{
+	margin-top:0;
+	margin-bottom: 25px;
+	font-size: 20px;
+	display: block;
+}
+
+a{
+	color: white;
+	text-transform: uppercase;
+}
+
+a:hover,
+a:focus{
+	color: #A9B262;
+}
+
+
+.container {
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}  
+
+.container-location {
+	width: 1170px;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+
+.logo{
+	background: url('./logo.png');
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	width: 385px;
+	height: 90px;
+}
+
+
+.fa{ 
+	color: white;
+}
+
+.fa-close{
+	color: #A9B262;
+}
+
+.menu-toggle{
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	font-size: 30px;
+	color: #fff;
+}
+
+.menu{
+	width: 300px;
+	display: block;
+	background: #333;
+	height: 100%;
+	top: 0;
+	right: -300px;
+	position: fixed;
+	z-index: 100;
+	text-align: center;
+	transition: right 0.4s;
+}
+
+.menu.nav-expanded{
+	right: 0;
+}
+
+.menu .close{
+	color: #fff;
+	margin-right: 10px;
+	margin-top:10px;
+}
+
+.menu h3{
+	margin-top:50px;
+	text-transform: uppercase;
+}
+
+.menu .nav{
+	padding: 0;
+}
+
+.menu .nav > li > a{
+	color: #fff;
+}
+
+.menu .nav > li > a:hover,
+.menu .nav > li > a:focus{
+	background: transparent;
+	color: #A9B262;
+}
+
+
+/* Backgrounds */
+
+
+#banner-location {
+	background: url(/assets/location-bg.jpg); no-repeat center fixed;
+	background-position: 100%;
+	
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	text-align: center;
+
+}
+
+#banner-location {
+  	background: url(/assets/location-bg.jpg) repeat fixed;
+    background-position: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 3000px;
+ }
+
+/* Images */
+img{
+	-webkit-filter: sepia(70%);
+	top:0;
+	left: 15px;
+	right: 15px;
+	height: 257px;
+	width: 360px;
+	vertical-align: middle;
+}
+
+
+/* Location */
+
+
+.location-item{
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.location-item .mask{
+	position: absolute;
+	top:0;
+	height: 257px;
+	width: 360px;
+	transition: all 0.4s;
+	background: rgba(0,0,0, 0.5);
+	opacity: 0;
+}
+
+.location-item .figcaption.mask i{
+	position: absolute;
+	height: 257px;
+	width: 360px;
+	color: #fff;
+	background-color: #A9B262;
+}
+
+.location-item:hover .mask{
+	opacity: 1;
+}
+
+
+.maskpadding {
+	height: 257px;
+	width: 360px;
+	padding: 40px;
+
+}
+
+m1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	color: #fff;
+	position: center;
+}
+m2 {
+	font-family: 'Lora', serif;
+	font-size: 16px;
+	color: #fff;
+	position: center;
+    
+}
+
+  
+</style>
+
+
 <div class="container-location">
 
 	<header>
@@ -12,6 +284,7 @@
 
 			<figure class="location-item col-md-4 col-sm-6" >
 
+
 			<img src="/assets/<%= l.image %>" > </img>
 
 			<figcaption class="mask">
@@ -21,7 +294,7 @@
 				<m2><%= l.address %><br>
 				Latitude: <%= l.lat %><br>
 				Longitude: <%= l.lng %><br>
-				Location added: <%= l.created_at %></m2>
+				Location added: <%= l.created_at.strftime('%c') %></m2>
 			</div>	
 				</figcaption>
 			</figure>
@@ -31,3 +304,4 @@
 </div>
 
 </section>
+
