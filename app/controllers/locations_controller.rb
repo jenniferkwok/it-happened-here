@@ -11,7 +11,7 @@ class LocationsController < ApplicationController
 	def create
 		location_params = params.require(:location).permit(:name, :address, :image)
 		@location = Location.create(location_params)
-		redirect_to "/events"
+		redirect_to "/events/new"
 	end
 
 	def showOne

@@ -6,13 +6,6 @@
 		<h2>Add A Historical Event</h2>
 
 		<%= form_for @event do |f| %>
-			<div class="form-group">
-				<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
-			</div>
-			<h5>Choose a Date - required</h5>
-			<div class="form-group">
-				<%= f.date_field :date, placeholder: "Choose a Date", :prompt => :month, class: 'form-control'%>
-			</div>
 			<hr>
 			Pick a location
 			<br>
@@ -27,6 +20,13 @@
 				ADD  A NEW LOCATION</button>
 			</span>
 			<hr>
+			<div class="form-group">
+				<%= f.text_field :title, placeholder: "Title of Event", class: 'form-control' %>
+			</div>
+			
+			<div class="form-group">
+				<%= f.date_field :date, placeholder: "Choose a Date", :prompt => :month, class: 'form-control'%>
+			</div>
 	
 			<div class="form-group">
 				<%= f.text_field :link, placeholder: "Link URL (optional)", class: 'form-control' %>
