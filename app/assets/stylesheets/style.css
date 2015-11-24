@@ -76,10 +76,29 @@ a:focus{
 }
 
  
- .container {
- 	padding-top: 0px;
+.container {
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}  
 
- }  
+.container-location {
+	width: 1170px;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
 #yourlocation{
 	font-family: 'Playfair Display', serif;
 }
