@@ -1,6 +1,6 @@
 <style type="text/css">
 	body {
-			font-family: 'Playfair Display', serif; 
+			/*font-family: 'Playfair Display', serif; */
 	}
 	#showEvents{
 		background-color: transparent;
@@ -28,7 +28,7 @@
 
 <br>
 <%if current_user%>
-<button class="hvr-wobble-vertical"><a  href="/events/new">Add a Historical Event</a></button>
+<div class= "hvr-wobble-vertical"><a href="/events/new" class="btn btn-primary">Add a Historical Event</a></div>
 <% end %>
 <div id = "showEvents"></div>
 </div>
