@@ -38,6 +38,14 @@ em {
 
 }
 
+
+.well {
+	background-color: #3c3b58;
+	color: white;
+	border-radius: 8px; 
+	margin: 10px;
+}
+
 /*SECTION*/
 section{
 	background-color: #fff;
