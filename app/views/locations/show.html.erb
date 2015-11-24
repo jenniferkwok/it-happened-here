@@ -1,6 +1,5 @@
+
 <section id= "banner-location"> 
-
-
 
 <style> 
 
@@ -8,13 +7,6 @@ body, input{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	background-color: none;
-}
-
-
-h1{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 50px;
-	padding-bottom: 20px;
 }
 
 h2{
@@ -25,18 +17,6 @@ h2{
 
 }
 
-h3{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 30px;
-	padding-bottom: 16px;
-	color: #5b5b5b;
-
-}
-
-p{
-	font-family: 'Lora', serif;
-	color: white;
-}
 
 p2{
 	font-family: 'Lora', serif;
@@ -182,11 +162,24 @@ a:focus{
 
 /* Backgrounds */
 
+#banner {
+	background-attachment: scroll, scroll, scroll, fixed;
+	background-image: url('home-bg.jpg');
+	background-position: 100%;
+	background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+	color: white;
+	cursor: default;
+	text-align: center;
+
+}
 
 #banner-location {
-	background: url(/assets/location-bg.jpg); no-repeat center fixed;
+	background: url('location-bg.jpg') no-repeat center fixed;
 	background-position: 100%;
-	
+	background-repeat: repeat;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
@@ -194,14 +187,6 @@ a:focus{
 	text-align: center;
 
 }
-
-#banner-location {
-  	background: url(/assets/location-bg.jpg) repeat fixed;
-    background-position: 100%;
-    background-repeat: repeat;
-    background-size: cover;
-    height: 3000px;
- }
 
 /* Images */
 img{
@@ -267,7 +252,14 @@ m2 {
     
 }
 
-  
+  #banner-location {
+  	background:url(/assets/location-bg.jpg) fixed repeat;
+    background-position: 100%;
+    background-size: cover;
+    width: 100%;
+	height: 3000px;
+   
+ }
 </style>
 
 
@@ -283,7 +275,6 @@ m2 {
 
 
 			<figure class="location-item col-md-4 col-sm-6" >
-
 
 			<img src="/assets/<%= l.image %>" > </img>
 
@@ -304,4 +295,3 @@ m2 {
 </div>
 
 </section>
-
