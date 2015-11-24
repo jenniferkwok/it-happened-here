@@ -27,6 +27,7 @@
 			<ul class="nav">
 				<li><%= link_to "HOME", home_path, method: :get%></li>
 				<li><%= link_to "MAP", events_path, method: :get%></li>
+				<li><%= link_to "LOCATIONS", locations_path, method: :get%> </li>
 				<li><%= link_to "COMMUNITY", community_path, method: :get%></li>
 				<li><%= link_to "ABOUT", about_path, method: :get%></a></li>
 				
@@ -37,7 +38,6 @@
 
 				<% if current_user %>
 				
-				<li><%= link_to "LOCATIONS", locations_path, method: :get%> </li>
 				
 				<li><%= link_to "USERS", users_path, method: :get%></li>
 				<li><%= link_to "EDIT USER", edit_user_registration_path, method: :get%></li>

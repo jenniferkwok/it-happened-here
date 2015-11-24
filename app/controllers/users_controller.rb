@@ -10,7 +10,7 @@ def index
 end
 
 def show
-	@user = User.all
+	@user = User.find(params[:id])
 
 end
 def edit
